@@ -33,4 +33,14 @@ public class Throw : MonoBehaviour
         projectileObject.GetComponentInChildren<Projectile>().Throw();
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+
+        if (other.tag == "Wood" && other.GetComponent<Projectile>().canPickUp)
+        {
+            GameObject.Destroy(other.gameObject.transform.parent.gameObject);
+            numberOfProjectiles++;
+        }
+    }
+
 }

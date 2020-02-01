@@ -31,13 +31,13 @@ public class HealthController : MonoBehaviour
         if (other.tag == "Hazard")
         {
             TakeDamage();
-            Instantiate(woodPiece, transform.position, transform.rotation);
+            Instantiate(woodPiece, transform.position, transform.rotation).GetComponentInChildren<Projectile>().DamageDrop();
         }
 
-        if (other.tag == "Wood")
+        if (other.tag == "Wood" && other.GetComponent<Projectile>().canHeal)
         {
             Heal();
-            GameObject.Destroy(other);
+            GameObject.Destroy(other.gameObject.transform.parent.gameObject);
         }
     }
 

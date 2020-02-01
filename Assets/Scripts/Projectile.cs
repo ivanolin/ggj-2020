@@ -36,6 +36,7 @@ public class Projectile : MonoBehaviour
 
     IEnumerator throwCoroutine()
     {
+        
         yield return new WaitForSeconds(0.5f);
         canPickUp = true;
         Debug.Log("Ready for pick up");
@@ -45,13 +46,6 @@ public class Projectile : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         canHeal = true;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Colliding");
-        collision.collider.gameObject.GetComponent<Throw>().numberOfProjectiles++;
-        Destroy(transform.parent);
     }
 
 }

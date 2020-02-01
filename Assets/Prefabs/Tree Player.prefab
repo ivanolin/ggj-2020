@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4217249256020268536}
   - component: {fileID: 6778217571255032896}
   - component: {fileID: 7584187236908905380}
+  - component: {fileID: 37736235252616986}
   m_Layer: 9
   m_Name: Tree Player
   m_TagString: Untagged
@@ -168,4 +169,17 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 5.12
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &37736235252616986
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217249256020268539}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.24, y: 10.24, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
