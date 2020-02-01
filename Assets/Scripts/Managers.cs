@@ -32,6 +32,11 @@ public class Managers : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void ToggleCredits(bool enabled)
+    {
+        FindObjectOfType<Credits>().gameObject.SetActive(enabled);
+    }
+
     public void Quit()
     {
         Application.Quit();
