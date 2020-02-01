@@ -766,25 +766,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 523717821}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &713171387 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4217249256020268539, guid: 0ee56a91b53304e599272c7a6e3ab896,
-    type: 3}
-  m_PrefabInstance: {fileID: 8716630377179054259}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &713171388
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713171387}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.25, y: 10.25, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &900069454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3455,11 +3436,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 37736235252616986, guid: 0ee56a91b53304e599272c7a6e3ab896,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4217249256020268532, guid: 0ee56a91b53304e599272c7a6e3ab896,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3525,16 +3501,5 @@ PrefabInstance:
       propertyPath: HealthBar
       value: 
       objectReference: {fileID: 283371533}
-    - target: {fileID: 6778217571255032896, guid: 0ee56a91b53304e599272c7a6e3ab896,
-        type: 3}
-      propertyPath: health
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7584187236908905380, guid: 0ee56a91b53304e599272c7a6e3ab896,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7584187236908905380, guid: 0ee56a91b53304e599272c7a6e3ab896, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ee56a91b53304e599272c7a6e3ab896, type: 3}
