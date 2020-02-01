@@ -31,7 +31,7 @@ public class HealthController : MonoBehaviour
         if (other.tag == "Hazard")
         {
             TakeDamage();
-            Instantiate(woodPiece);
+            Instantiate(woodPiece, transform.position, transform.rotation);
         }
 
         if (other.tag == "Wood")
