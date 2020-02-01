@@ -5,36 +5,20 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public float AccelerationFactor;
-    public float VelocityCap;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float Speed;
 
     // Update is called once per frame
     void Update()
     {
-        Move(new Vector2(-Input.GetAxis("Horizontal"), -Input.GetAxis("Vertical")));
+        Move();
     }
 
-    private void Move(Vector2 direction)
+    private void Move()
     {
-        Debug.Log(direction.x + " " + direction.y);
 
-        // Accelerate player in given direction
-        GetComponent<Rigidbody>().AddForce(new Vector3(direction.x, 0, direction.y) * AccelerationFactor * Time.deltaTime);
+        var moveDirection = new Vector3(-Input.GetAxis("Horizontal"), 0.0f, -Input.GetAxis("Vertical"));
+        moveDirection *= Speed;
 
-        // Cap velocity
-
-        Vector3 velocity = GetComponent<Rigidbody>().velocity;
-        Debug.Log("VEL " + velocity.magnitude);
-        if(velocity.magnitude > VelocityCap)
-        {
-            GetComponent<Rigidbody>().velocity = velocity.normalized * VelocityCap;
-        }
+        GetComponent<CharacterController>().Move(moveDirection * Time.deltaTime);
     }
 }
