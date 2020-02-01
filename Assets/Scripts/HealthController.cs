@@ -67,22 +67,26 @@ public class HealthController : MonoBehaviour
     {
         if(health == 3)
         {
-            spriterender.sprite = threeHealth;
+            //spriterender.sprite = threeHealth;
+            Debug.Log("3");
         }
 
         if(health == 2)
         {
-            spriterender.sprite = twoHealth;
+            //spriterender.sprite = twoHealth;
+            Debug.Log("2");
         }
 
         if(health == 1)
         {
-            spriterender.sprite = oneHealth;
+            //spriterender.sprite = oneHealth;
+            Debug.Log("1");
         }
 
         if(health == 0)
         {
-            spriterender.sprite = zeroHealth;
+            //spriterender.sprite = zeroHealth;
+            Debug.Log("0");
         }
     }
 }

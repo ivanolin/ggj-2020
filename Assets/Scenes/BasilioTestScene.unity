@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 92147535}
   - component: {fileID: 92147534}
   - component: {fileID: 92147533}
+  - component: {fileID: 92147537}
   m_Layer: 0
   m_Name: Hazard-BuzzSaw
   m_TagString: Hazard
@@ -307,6 +308,19 @@ Transform:
   m_Father: {fileID: 1019254021}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &92147537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92147532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &218070225
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +333,7 @@ GameObject:
   - component: {fileID: 218070228}
   - component: {fileID: 218070227}
   - component: {fileID: 218070226}
+  - component: {fileID: 218070230}
   m_Layer: 0
   m_Name: Hazard-BoulderSmash
   m_TagString: Hazard
@@ -400,6 +415,19 @@ Transform:
   m_Father: {fileID: 1019254021}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &218070230
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218070225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &236381067
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +519,7 @@ Transform:
   m_LocalScale: {x: 6.9908667, y: 3.5, z: 4.2990394}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &591902216
 GameObject:
@@ -679,6 +707,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634678488}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &740269495
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4217249256020268532, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.894747
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217249256020268532, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217249256020268532, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.550249
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217249256020268532, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217249256020268532, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217249256020268532, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217249256020268532, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217249256020268532, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217249256020268532, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217249256020268532, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217249256020268532, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217249256020268539, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_Name
+      value: Tree Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0ee56a91b53304e599272c7a6e3ab896, type: 3}
 --- !u!1 &868434320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,6 +1160,7 @@ GameObject:
   - component: {fileID: 929249319}
   - component: {fileID: 929249318}
   - component: {fileID: 929249317}
+  - component: {fileID: 929249321}
   m_Layer: 0
   m_Name: Hazard-BearClaw (1)
   m_TagString: Untagged
@@ -1138,12 +1236,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929249316}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45.04454, y: -13.969866, z: -34.61862}
+  m_LocalPosition: {x: -45.04454, y: -13.969866, z: -35.798622}
   m_LocalScale: {x: 2.1711, y: 1, z: 0.8472037}
   m_Children: []
   m_Father: {fileID: 1019254021}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &929249321
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929249316}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &967114246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,6 +1267,7 @@ GameObject:
   - component: {fileID: 967114249}
   - component: {fileID: 967114248}
   - component: {fileID: 967114247}
+  - component: {fileID: 967114251}
   m_Layer: 0
   m_Name: Hazard-Campfire
   m_TagString: Hazard
@@ -1237,6 +1349,19 @@ Transform:
   m_Father: {fileID: 1019254021}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &967114251
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967114246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1019254020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,7 +1396,7 @@ Transform:
   - {fileID: 92147536}
   - {fileID: 929249320}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1019593922
 GameObject:
@@ -1549,7 +1674,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 55.29, y: -183.831, z: -359.592}
 --- !u!1 &1085331486
 GameObject:
@@ -1578,7 +1703,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085331486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.8623137, y: 24.468056, z: -42.12859}
+  m_LocalPosition: {x: 4.8623137, y: 24.468056, z: -41.12859}
   m_LocalScale: {x: 13, y: 3.5, z: 5}
   m_Children: []
   m_Father: {fileID: 1667564511}
@@ -2043,7 +2168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621445328}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.862314, y: 24.468056, z: -36.12859}
+  m_LocalPosition: {x: 8.862314, y: 24.468056, z: -38.12859}
   m_LocalScale: {x: 5, y: 3.5, z: 7}
   m_Children: []
   m_Father: {fileID: 1667564511}
@@ -2342,7 +2467,7 @@ Transform:
   - {fileID: 1417593571}
   - {fileID: 1444756733}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1818191255
 PrefabInstance:
@@ -2518,6 +2643,7 @@ GameObject:
   - component: {fileID: 1927622347}
   - component: {fileID: 1927622346}
   - component: {fileID: 1927622345}
+  - component: {fileID: 1927622349}
   m_Layer: 0
   m_Name: Hazard-Woodpecker
   m_TagString: Hazard
@@ -2599,6 +2725,19 @@ Transform:
   m_Father: {fileID: 1019254021}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1927622349
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927622344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1938463813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,6 +2843,7 @@ GameObject:
   - component: {fileID: 2030835930}
   - component: {fileID: 2030835929}
   - component: {fileID: 2030835928}
+  - component: {fileID: 2030835932}
   m_Layer: 0
   m_Name: Hazard-BearClaw
   m_TagString: Hazard
@@ -2785,6 +2925,19 @@ Transform:
   m_Father: {fileID: 1019254021}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2030835932
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030835927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2118731954
 GameObject:
   m_ObjectHideFlags: 0
@@ -3092,7 +3245,7 @@ PrefabInstance:
     - target: {fileID: 4572444074471235104, guid: 5aba80fc5b2985441abb95535134fc20,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4572444074471235104, guid: 5aba80fc5b2985441abb95535134fc20,
         type: 3}
