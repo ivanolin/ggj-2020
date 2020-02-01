@@ -14,11 +14,22 @@ public class AudioManager : MonoBehaviour
 
     AudioSource sfxAudio;
 
+
+    public SongController openingSong;
+    public SongController mainSong;
+
+
     public SongController currentSong;
 
 
     private void Start() {
         sfxAudio = GetComponent<AudioSource>();
+
+        openingSong.Init();
+        mainSong.Init();
+
+        currentSong = openingSong;
+        currentSong.TurnOn();
     }
 
 
@@ -33,12 +44,11 @@ public class AudioManager : MonoBehaviour
         }
 
         // adjust music volume to match the intensity
-        if (currentSong != null) {
-            currentSong.UpdateIntensity(currentIntensity);
-        }
+        openingSong.UpdateIntensity(currentIntensity);
+        mainSong.UpdateIntensity(currentIntensity);
     }
 
-    void ChangeIntensity(float intensity) {
+    public void ChangeIntensity(float intensity) {
         desiredIntensity = currentIntensity;
     }
 
@@ -46,5 +56,21 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySoundEffect(AudioClip sound) {
         sfxAudio.PlayOneShot(sound);
+    }
+
+
+    public void SwitchSong(SongController newSong, float fadeOutTime) {
+        currentSong.TurnOff(fadeOutTime);
+        currentSong = newSong;
+        currentSong.TurnOn();
+    }
+
+
+    public void SwitchSongToOther() {
+        if (currentSong == openingSong) {
+            SwitchSong(mainSong, 2f);
+        } else {
+            SwitchSong(openingSong, 1f);
+        }
     }
 }

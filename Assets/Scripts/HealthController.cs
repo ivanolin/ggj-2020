@@ -1,20 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
+<<<<<<< HEAD
     public int health = 3;
     public int maxHealth;
     private float newSpeed;
     private float minSpeed;
     private float maxSpeed;
-    public SpriteRenderer spriterender;
-    public Sprite threeHealth;
-    public Sprite twoHealth;
-    public Sprite oneHealth;
-    public Sprite zeroHealth;
+=======
+    public int health = 15;
+    private int maxHealth;
 
+>>>>>>> 5f71239ef52ed7c524075120696da54242b901d8
+    public SpriteRenderer spriterender;
+    public Image HealthBar;
     public GameObject woodPiece;
     public PlayerMovementController movementController;
 
@@ -22,7 +25,17 @@ public class HealthController : MonoBehaviour
     void Start()
     {
         maxHealth = health;
+<<<<<<< HEAD
         movementController = GetComponent<PlayerMovementController>();
+=======
+        health /= 2;
+        SetHealthBar();
+    }
+
+    void SetHealthBar()
+    {
+        HealthBar.fillAmount = (float)health / (float)maxHealth;
+>>>>>>> 5f71239ef52ed7c524075120696da54242b901d8
     }
 
     // Update is called once per frame
@@ -48,6 +61,8 @@ public class HealthController : MonoBehaviour
 
     public void TakeDamage()
     {
+        Debug.Log("TOOK DAMAGE");
+
         health--;
         maxSpeed = movementController.maxSpeed;
         minSpeed = movementController.minSpeed;
@@ -57,13 +72,13 @@ public class HealthController : MonoBehaviour
         {
             health = 0;
         }
-
-        ChangeSprite();
+        SetHealthBar();
     }
 
     public void Heal()
     {
         health++;
+<<<<<<< HEAD
         maxSpeed = movementController.maxSpeed;
         minSpeed = movementController.minSpeed;
         newSpeed = Vector3.Lerp(new Vector3(minSpeed, 0, 0), new Vector3(maxSpeed, 0, 0), (float)health / maxHealth).x;
@@ -97,9 +112,12 @@ public class HealthController : MonoBehaviour
         }
 
         if(health == 0)
+=======
+        if(health > maxHealth)
+>>>>>>> 5f71239ef52ed7c524075120696da54242b901d8
         {
-            //spriterender.sprite = zeroHealth;
-            Debug.Log("0");
+            health = maxHealth;
         }
+        SetHealthBar();
     }
 }
