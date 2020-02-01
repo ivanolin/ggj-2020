@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 // a singleton component that provides global access to the game's managers (eg scene manager, audio manager, etc)
 public class Managers : MonoBehaviour
@@ -25,20 +24,5 @@ public class Managers : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-    }
-
-    public void Play()
-    {
-        SceneManager.LoadScene(1);
-    }
-
-    public void ToggleCredits(bool enabled)
-    {
-        FindObjectOfType<Credits>().gameObject.SetActive(enabled);
-    }
-
-    public void Quit()
-    {
-        Application.Quit();
     }
 }
