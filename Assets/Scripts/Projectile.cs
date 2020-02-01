@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    Rigidbody rigidbody;
+    public bool canHeal = false;
+    public bool canPickUp = false;
     
+    // Case 1: throw: can heal immediately, but can't pick up for interval
+    // Case 2: damage drop: can pickup immediately but can't heal for interval 
+
     // Start is called before the first frame update
     void Awake()
     {
-        rigidbody = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
@@ -18,9 +22,36 @@ public class Projectile : MonoBehaviour
         
     }
 
-    public void Throw(Vector3 origin, Vector3 destination)
+    public void Throw()
     {
-        Debug.Log(destination);
-        rigidbody.AddForce((destination - origin)*100);
+        canHeal = true;
+        StartCoroutine(throwCoroutine());
     }
+
+    public void DamageDrop()
+    {
+        canPickUp = true;
+        StartCoroutine(damageDropCoroutine());
+    }
+
+    IEnumerator throwCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        canPickUp = true;
+        Debug.Log("Ready for pick up");
+    }
+
+    IEnumerator damageDropCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        canHeal = true;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Colliding");
+        collision.collider.gameObject.GetComponent<Throw>().numberOfProjectiles++;
+        Destroy(transform.parent);
+    }
+
 }

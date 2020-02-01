@@ -7,6 +7,7 @@ public class Throw : MonoBehaviour
     public GameObject ProjectilePrefab;
     public float ThrowFactor;
     Rigidbody Rigidbody;
+    public int numberOfProjectiles = 3;
     
     // Start is called before the first frame update
     void Start()
@@ -17,8 +18,9 @@ public class Throw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) && numberOfProjectiles > 0)
         {
+            numberOfProjectiles--;
             ThrowObject();
         }
     }
@@ -28,5 +30,7 @@ public class Throw : MonoBehaviour
         Debug.Log($"{throwDirection.x} {throwDirection.y} {throwDirection.z}");
         GameObject projectileObject = Instantiate(ProjectilePrefab, GetComponent<Rigidbody>().position + Vector3.up * 0.5f, Quaternion.identity);
         projectileObject.GetComponent<Rigidbody>().AddForce(throwDirection * ThrowFactor);
+        projectileObject.GetComponentInChildren<Projectile>().Throw();
     }
+
 }
