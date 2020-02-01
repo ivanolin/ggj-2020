@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovementController : MonoBehaviour
 {
+
+    public string HorizontalAxis;
+    public string VerticalAxis;
 
     public float Speed;
     public Vector3 LastDirection;
@@ -24,7 +27,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
 
-        var moveDirection = new Vector3(-Input.GetAxis("Horizontal"), 0.0f, -Input.GetAxis("Vertical"));
+        var moveDirection = new Vector3(-Input.GetAxis(HorizontalAxis), 0.0f, -Input.GetAxis(VerticalAxis));
 
         if(moveDirection.magnitude > 0)
             LastDirection = moveDirection;

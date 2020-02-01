@@ -24,7 +24,7 @@ public class Throw : MonoBehaviour
     }
     void ThrowObject()
     {
-        Vector3 throwDirection = GetComponent<PlayerController>().LastDirection.normalized;
+        Vector3 throwDirection = GetComponent<PlayerMovementController>().LastDirection.normalized;
         Debug.Log($"{throwDirection.x} {throwDirection.y} {throwDirection.z}");
         GameObject projectileObject = Instantiate(ProjectilePrefab, GetComponent<Rigidbody>().position + Vector3.up * 0.5f, Quaternion.identity);
         projectileObject.GetComponent<Rigidbody>().AddForce(throwDirection * ThrowFactor);
