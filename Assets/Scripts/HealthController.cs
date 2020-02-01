@@ -5,7 +5,10 @@ using UnityEngine;
 public class HealthController : MonoBehaviour
 {
     public int health = 3;
-
+    public int maxHealth;
+    private float newSpeed;
+    private float minSpeed;
+    private float maxSpeed;
     public SpriteRenderer spriterender;
     public Sprite threeHealth;
     public Sprite twoHealth;
@@ -13,11 +16,13 @@ public class HealthController : MonoBehaviour
     public Sprite zeroHealth;
 
     public GameObject woodPiece;
+    public PlayerMovementController movementController;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        maxHealth = health;
+        movementController = GetComponent<PlayerMovementController>();
     }
 
     // Update is called once per frame
@@ -44,6 +49,10 @@ public class HealthController : MonoBehaviour
     public void TakeDamage()
     {
         health--;
+        maxSpeed = movementController.maxSpeed;
+        minSpeed = movementController.minSpeed;
+        newSpeed = Vector3.Lerp(new Vector3(minSpeed,0,0),new Vector3(maxSpeed,0,0),(float)health/maxHealth).x;
+        movementController.Speed = newSpeed;
         if(health < 0)
         {
             health = 0;
@@ -55,7 +64,11 @@ public class HealthController : MonoBehaviour
     public void Heal()
     {
         health++;
-        if(health > 3)
+        maxSpeed = movementController.maxSpeed;
+        minSpeed = movementController.minSpeed;
+        newSpeed = Vector3.Lerp(new Vector3(minSpeed, 0, 0), new Vector3(maxSpeed, 0, 0), (float)health / maxHealth).x;
+        movementController.Speed = newSpeed;
+        if (health > 3)
         {
             health = 3;
         }
