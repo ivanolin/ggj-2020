@@ -33,7 +33,9 @@ public class AudioManager : MonoBehaviour
         }
 
         // adjust music volume to match the intensity
-        currentSong.UpdateIntensity(currentIntensity);
+        if (currentSong != null) {
+            currentSong.UpdateIntensity(currentIntensity);
+        }
     }
 
     void ChangeIntensity(float intensity) {
