@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &34562731558769717
+--- !u!1 &4217249256020268539
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 34562731558769722}
-  - component: {fileID: 34562731558769723}
-  - component: {fileID: 34562731558769721}
-  - component: {fileID: 34562731558769719}
-  - component: {fileID: 34562731558769727}
-  - component: {fileID: 34562731558769718}
+  - component: {fileID: 4217249256020268532}
+  - component: {fileID: 4217249256020268533}
+  - component: {fileID: 4217249256020268535}
+  - component: {fileID: 4217249256020268529}
+  - component: {fileID: 4217249256020268536}
+  - component: {fileID: 6778217571255032896}
+  - component: {fileID: 7584187236908905380}
   m_Layer: 9
-  m_Name: Bird Player
+  m_Name: Tree Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &34562731558769722
+--- !u!4 &4217249256020268532
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34562731558769717}
+  m_GameObject: {fileID: 4217249256020268539}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.029933, y: 2.55, z: -20.441189}
+  m_LocalPosition: {x: 25.3, y: 4.2, z: -13.34}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &34562731558769723
+--- !u!212 &4217249256020268533
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34562731558769717}
+  m_GameObject: {fileID: 4217249256020268539}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 09fe0c04b80a44024a37ea8d051f64e0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -85,44 +86,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &34562731558769721
+--- !u!114 &4217249256020268535
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34562731558769717}
+  m_GameObject: {fileID: 4217249256020268539}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac115d6bcc2c942ec83027f8f6704767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalAxis: BirdHorizontal
-  VerticalAxis: BirdVertical
+  HorizontalAxis: TreeHorizontal
+  VerticalAxis: TreeVertical
   Speed: 10
   LastDirection: {x: 0, y: 0, z: 0}
---- !u!114 &34562731558769719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34562731558769717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a814cdf7ea4d43f38d748a521050929, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 8250075569355865754, guid: 8f4f2e6d4d35d430a885cc24dabe49b6,
-    type: 3}
-  ThrowFactor: 1500
---- !u!143 &34562731558769727
+--- !u!143 &4217249256020268529
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34562731558769717}
+  m_GameObject: {fileID: 4217249256020268539}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -134,13 +120,13 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &34562731558769718
+--- !u!54 &4217249256020268536
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34562731558769717}
+  m_GameObject: {fileID: 4217249256020268539}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -150,3 +136,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &6778217571255032896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217249256020268539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eaf2c54727d73146ab11e1836cfd945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  spriterender: {fileID: 4217249256020268533}
+  threeHealth: {fileID: 0}
+  twoHealth: {fileID: 0}
+  oneHealth: {fileID: 0}
+  zeroHealth: {fileID: 0}
+  woodPiece: {fileID: 8250075569355865754, guid: 8f4f2e6d4d35d430a885cc24dabe49b6,
+    type: 3}
+--- !u!135 &7584187236908905380
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217249256020268539}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5.12
+  m_Center: {x: 0, y: 0, z: 0}
