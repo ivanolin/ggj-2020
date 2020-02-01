@@ -9,6 +9,8 @@ public class PlayerMovementController : MonoBehaviour
     public string VerticalAxis;
 
     public float Speed;
+    public float minSpeed;
+    public float maxSpeed;
     public Vector3 LastDirection;
 
     private CharacterController characterController;
@@ -17,6 +19,7 @@ public class PlayerMovementController : MonoBehaviour
 
     void Start() {
         characterController = GetComponent<CharacterController>();
+        Speed = maxSpeed;
     }
 
     void Update()
