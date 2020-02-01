@@ -5,6 +5,7 @@ using UnityEngine;
 public class Throw : MonoBehaviour
 {
     public GameObject ProjectilePrefab;
+    public string ThrowAxis;
     public float ThrowFactor;
     Rigidbody Rigidbody;
     public int numberOfProjectiles = 3;
@@ -16,12 +17,19 @@ public class Throw : MonoBehaviour
     }
 
     // Update is called once per frame
+    private bool ThrowDown = false;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && numberOfProjectiles > 0)
+        if (ThrowDown == false && Input.GetAxis(ThrowAxis) > 0 && numberOfProjectiles > 0)
         {
             numberOfProjectiles--;
             ThrowObject();
+
+            ThrowDown = true;
+        }
+        else if(Input.GetAxis(ThrowAxis) == 0)
+        {
+            ThrowDown = false;
         }
     }
     void ThrowObject()

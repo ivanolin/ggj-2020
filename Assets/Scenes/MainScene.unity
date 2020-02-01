@@ -802,6 +802,11 @@ PrefabInstance:
       propertyPath: numberOfProjectiles
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 34562731558769719, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
+        type: 3}
+      propertyPath: ThrowAxis
+      value: BirdThrow
+      objectReference: {fileID: 0}
     - target: {fileID: 34562731558769722, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
         type: 3}
       propertyPath: m_LocalPosition.x
