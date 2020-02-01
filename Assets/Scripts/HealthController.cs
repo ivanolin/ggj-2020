@@ -12,6 +12,8 @@ public class HealthController : MonoBehaviour
     public Image HealthBar;
     public GameObject woodPiece;
 
+    public AudioClip damageSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +51,8 @@ public class HealthController : MonoBehaviour
     public void TakeDamage()
     {
         Debug.Log("TOOK DAMAGE");
+
+        Managers.AudioManager?.PlaySoundEffect(damageSound);
 
         health--;
         if(health < 0)

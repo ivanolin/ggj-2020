@@ -25,27 +25,32 @@ public class AudioManager : MonoBehaviour
     private void Start() {
         sfxAudio = GetComponent<AudioSource>();
 
-        openingSong.Init();
-        mainSong.Init();
+        if (openingSong != null && mainSong != null) {
+            openingSong.Init();
+            mainSong.Init();
 
-        currentSong = openingSong;
-        currentSong.TurnOn();
+            currentSong = openingSong;
+            currentSong.TurnOn();
+        }
     }
 
 
     void Update() {
-        // move current intensity towards desired intensity
-        if (Mathf.Abs(desiredIntensity - currentIntensity) < intensityFadeSpeed * Time.deltaTime) {
-            currentIntensity = desiredIntensity;
-        } else if (currentIntensity < desiredIntensity) {
-            currentIntensity += intensityFadeSpeed * Time.deltaTime;
-        } else {
-            currentIntensity -= intensityFadeSpeed * Time.deltaTime;
-        }
 
-        // adjust music volume to match the intensity
-        openingSong.UpdateIntensity(currentIntensity);
-        mainSong.UpdateIntensity(currentIntensity);
+        if (openingSong != null && mainSong != null) {
+            // move current intensity towards desired intensity
+            if (Mathf.Abs(desiredIntensity - currentIntensity) < intensityFadeSpeed * Time.deltaTime) {
+                currentIntensity = desiredIntensity;
+            } else if (currentIntensity < desiredIntensity) {
+                currentIntensity += intensityFadeSpeed * Time.deltaTime;
+            } else {
+                currentIntensity -= intensityFadeSpeed * Time.deltaTime;
+            }
+
+            // adjust music volume to match the intensity
+            openingSong.UpdateIntensity(currentIntensity);
+            mainSong.UpdateIntensity(currentIntensity);
+        }
     }
 
     public void ChangeIntensity(float intensity) {
