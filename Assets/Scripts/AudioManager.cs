@@ -12,11 +12,13 @@ public class AudioManager : MonoBehaviour
     public float intensityFadeSpeed;
 
 
-    AudioSource audio;
+    AudioSource sfxAudio;
+
+    public SongController currentSong;
 
 
     private void Start() {
-        audio = GetComponent<AudioSource>();
+        sfxAudio = GetComponent<AudioSource>();
     }
 
 
@@ -31,6 +33,7 @@ public class AudioManager : MonoBehaviour
         }
 
         // adjust music volume to match the intensity
+        currentSong.UpdateIntensity(currentIntensity);
     }
 
     void ChangeIntensity(float intensity) {
@@ -40,6 +43,6 @@ public class AudioManager : MonoBehaviour
     
 
     public void PlaySoundEffect(AudioClip sound) {
-        audio.PlayOneShot(sound);
+        sfxAudio.PlayOneShot(sound);
     }
 }
