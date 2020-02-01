@@ -1,23 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
-    public int health = 3;
+    public int health = 15;
+    private int maxHealth;
 
     public SpriteRenderer spriterender;
-    public Sprite threeHealth;
-    public Sprite twoHealth;
-    public Sprite oneHealth;
-    public Sprite zeroHealth;
-
+    public Image HealthBar;
     public GameObject woodPiece;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        maxHealth = health;
+        health /= 2;
+        SetHealthBar();
+    }
+
+    void SetHealthBar()
+    {
+        HealthBar.fillAmount = (float)health / (float)maxHealth;
     }
 
     // Update is called once per frame
@@ -43,50 +48,23 @@ public class HealthController : MonoBehaviour
 
     public void TakeDamage()
     {
+        Debug.Log("TOOK DAMAGE");
+
         health--;
         if(health < 0)
         {
             health = 0;
         }
-
-        ChangeSprite();
+        SetHealthBar();
     }
 
     public void Heal()
     {
         health++;
-        if(health > 3)
+        if(health > maxHealth)
         {
-            health = 3;
+            health = maxHealth;
         }
-
-        ChangeSprite();
-    }
-
-    public void ChangeSprite()
-    {
-        if(health == 3)
-        {
-            //spriterender.sprite = threeHealth;
-            Debug.Log("3");
-        }
-
-        if(health == 2)
-        {
-            //spriterender.sprite = twoHealth;
-            Debug.Log("2");
-        }
-
-        if(health == 1)
-        {
-            //spriterender.sprite = oneHealth;
-            Debug.Log("1");
-        }
-
-        if(health == 0)
-        {
-            //spriterender.sprite = zeroHealth;
-            Debug.Log("0");
-        }
+        SetHealthBar();
     }
 }
