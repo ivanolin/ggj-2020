@@ -9,13 +9,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4217249256020268532}
-  - component: {fileID: 4217249256020268533}
   - component: {fileID: 4217249256020268535}
   - component: {fileID: 4217249256020268529}
-  - component: {fileID: 4217249256020268536}
   - component: {fileID: 6778217571255032896}
+<<<<<<< HEAD
+  - component: {fileID: 4217249256020268533}
+  - component: {fileID: 4217249256020268536}
   - component: {fileID: 7584187236908905380}
+=======
+>>>>>>> 5f71239ef52ed7c524075120696da54242b901d8
   - component: {fileID: 37736235252616986}
+  - component: {fileID: 713171388}
   m_Layer: 9
   m_Name: Tree Player
   m_TagString: Untagged
@@ -37,6 +41,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4217249256020268535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217249256020268539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac115d6bcc2c942ec83027f8f6704767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HorizontalAxis: TreeHorizontal
+  VerticalAxis: TreeVertical
+  Speed: 0
+  minSpeed: 3
+  maxSpeed: 9
+  LastDirection: {x: 0, y: 0, z: 0}
+--- !u!143 &4217249256020268529
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217249256020268539}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 10.24
+  m_Radius: 5.12
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6778217571255032896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217249256020268539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eaf2c54727d73146ab11e1836cfd945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  maxHealth: 0
+  spriterender: {fileID: 4217249256020268533}
+  threeHealth: {fileID: 0}
+  twoHealth: {fileID: 0}
+  oneHealth: {fileID: 0}
+  zeroHealth: {fileID: 0}
+  woodPiece: {fileID: 8250075569355865754, guid: 8f4f2e6d4d35d430a885cc24dabe49b6,
+    type: 3}
+  movementController: {fileID: 0}
 --- !u!212 &4217249256020268533
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -87,40 +149,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4217249256020268535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4217249256020268539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac115d6bcc2c942ec83027f8f6704767, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HorizontalAxis: TreeHorizontal
-  VerticalAxis: TreeVertical
-  Speed: 10
-  LastDirection: {x: 0, y: 0, z: 0}
---- !u!143 &4217249256020268529
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4217249256020268539}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 10.24
-  m_Radius: 5.12
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4217249256020268536
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -137,6 +165,10 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+<<<<<<< HEAD
+--- !u!135 &7584187236908905380
+SphereCollider:
+=======
 --- !u!114 &6778217571255032896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,16 +181,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eaf2c54727d73146ab11e1836cfd945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 10
   spriterender: {fileID: 4217249256020268533}
-  threeHealth: {fileID: 0}
-  twoHealth: {fileID: 0}
-  oneHealth: {fileID: 0}
-  zeroHealth: {fileID: 0}
+  HealthBar: {fileID: 0}
   woodPiece: {fileID: 8250075569355865754, guid: 8f4f2e6d4d35d430a885cc24dabe49b6,
     type: 3}
---- !u!135 &7584187236908905380
-SphereCollider:
+  damageSound: {fileID: 8300000, guid: 499a0190985ba2046b29250e19b7cc68, type: 3}
+--- !u!65 &37736235252616986
+BoxCollider:
+>>>>>>> 5f71239ef52ed7c524075120696da54242b901d8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217249256020268539}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 10.24, y: 10.24, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &713171388
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -168,18 +212,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5.12
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &37736235252616986
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4217249256020268539}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.24, y: 10.24, z: 10}
+  m_Size: {x: 10.25, y: 10.25, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
