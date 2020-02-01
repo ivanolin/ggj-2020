@@ -33,6 +33,12 @@ public class HealthController : MonoBehaviour
             TakeDamage();
             Instantiate(woodPiece);
         }
+
+        if (other.tag == "Wood")
+        {
+            Heal();
+            GameObject.Destroy(other);
+        }
     }
 
     public void TakeDamage()
@@ -44,8 +50,6 @@ public class HealthController : MonoBehaviour
         }
 
         ChangeSprite();
-
-        //DROP Wood
     }
 
     public void Heal()
