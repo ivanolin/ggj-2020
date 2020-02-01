@@ -1,0 +1,32 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Throw : MonoBehaviour
+{
+    public GameObject ProjectilePrefab;
+    public float ThrowFactor;
+    Rigidbody Rigidbody;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        Rigidbody = GetComponent<Rigidbody>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            ThrowObject();
+        }
+    }
+    void ThrowObject()
+    {
+        Vector3 throwDirection = GetComponent<PlayerController>().LastDirection.normalized;
+        Debug.Log($"{throwDirection.x} {throwDirection.y} {throwDirection.z}");
+        GameObject projectileObject = Instantiate(ProjectilePrefab, GetComponent<Rigidbody>().position + Vector3.up * 0.5f, Quaternion.identity);
+        projectileObject.GetComponent<Rigidbody>().AddForce(throwDirection * ThrowFactor);
+    }
+}
