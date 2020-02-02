@@ -86,7 +86,6 @@ public class PlayerMovementController : MonoBehaviour
     void SetAnimationState()
     {
         animator.SetInteger("Direction", GetIntDirection());
-        Debug.Log(GetComponent<Rigidbody>().velocity.magnitude);
         animator.SetFloat("Speed", characterController.velocity.magnitude);
     }
 

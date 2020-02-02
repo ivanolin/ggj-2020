@@ -20,6 +20,10 @@ public class HealthController : MonoBehaviour
     public AudioClip deathSound;
     public AudioClip[] healSounds;
 
+    public Sprite UndamagedSprite;
+    public Sprite Damage1Sprite;
+    public Sprite Damage2Sprite;
+
     public bool hasTriggeredEnd;
 
     // Start is called before the first frame update
@@ -69,8 +73,6 @@ public class HealthController : MonoBehaviour
 
     public void TakeDamage()
     {
-        Debug.Log("TOOK DAMAGE");
-
         health--;
         maxSpeed = movementController.maxSpeed;
         minSpeed = movementController.minSpeed;
@@ -88,18 +90,15 @@ public class HealthController : MonoBehaviour
 
             if (health >= maxHealth * (2 / 3))
             {
-                animator.SetBool("IsHurt1", false);
-                animator.SetBool("IsHurt2", false);
+                GetComponentInChildren<SpriteRenderer>().sprite = Damage1Sprite;
             }
             else if (health >= maxHealth / 3 && health < maxHealth * (2 / 3))
             {
-                animator.SetBool("IsHurt1", true);
-                animator.SetBool("IsHurt2", false);
+                GetComponentInChildren<SpriteRenderer>().sprite = Damage2Sprite;
             }
             else
             {
-                animator.SetBool("IsHurt1", false);
-                animator.SetBool("IsHurt2", true);
+                GetComponentInChildren<SpriteRenderer>().sprite = UndamagedSprite;
             }
 
         } else {
