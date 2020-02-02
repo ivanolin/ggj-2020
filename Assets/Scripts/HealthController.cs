@@ -56,7 +56,7 @@ public class HealthController : MonoBehaviour
     {
         Debug.Log("TOOK DAMAGE");
 
-        Managers.AudioManager?.PlaySoundEffect(damageSound);
+        Managers.AudioManager.PlaySoundEffect(damageSound);
 
         health--;
         maxSpeed = movementController.maxSpeed;
