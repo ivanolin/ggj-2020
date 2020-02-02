@@ -13,6 +13,7 @@ public class PlayerMovementController : MonoBehaviour
     public float minSpeed;
     public float maxSpeed;
     public Vector3 LastDirection;
+    public bool cross = false;
 
     private CharacterController characterController;
 
@@ -39,7 +40,10 @@ public class PlayerMovementController : MonoBehaviour
 
     void Update()
     {
-        Move();
+        if (!cross)
+        {
+            Move();
+        }
         SetAnimationState();
     }
 

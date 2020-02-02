@@ -5,9 +5,10 @@ using UnityEngine;
 public class Hop : MonoBehaviour
 {
     public bool jumpVaild;
+    public bool cross = false;
     private float timer = 0f;
 
-    private GameObject interactable;
+    private ChildJumpObject interactable;
     
     // Start is called before the first frame update
     void Start() { }
@@ -23,24 +24,47 @@ public class Hop : MonoBehaviour
         {
             jumpVaild = false;
             if(interactable != null)
-                interactable.GetComponent<BoxCollider>().enabled = true;
+                interactable.transform.parent.GetComponent<BoxCollider>().enabled = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Z) && jumpVaild)
+        if ((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown("joystick button 0")) && jumpVaild)
         {
-            Debug.Log(interactable.GetComponentInChildren<BoxCollider>().gameObject.name);
-            interactable.GetComponent<BoxCollider>().enabled = false;
+            Debug.Log("Preparing to move...");
+            interactable.transform.parent.GetComponent<BoxCollider>().enabled = false;
+            Debug.Log("Position before: " + transform.position);
+            Debug.Log("Position to reach: " + interactable.siblingObject.transform.position);
+            cross = true;
+            GetComponent<PlayerMovementController>().cross = true;
+            Debug.Log("Position after: " + transform.position);
         }
+
+        if (cross)
+        {
+            Debug.Log("Inside cross statement");
+            Debug.Log("Position to reach: " + interactable.siblingObject.transform.position);
+            transform.position = Vector3.MoveTowards(transform.position, interactable.siblingObject.transform.position, GetComponent<PlayerMovementController>().Speed * Time.deltaTime);
+            if (Mathf.Approximately((transform.position - interactable.siblingObject.transform.position).x, 0))
+            {
+                if (Mathf.Approximately((transform.position - interactable.siblingObject.transform.position).y, 0))
+                {
+                    cross = false;
+                    GetComponent<PlayerMovementController>().cross = false;
+                }
+            }
+        }
+
+        
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Jump")
+        if(other.tag == "Jump" && !cross)
         {
             Debug.Log("JUMP");
             jumpVaild = true;
-            timer = 1.5f;
-            interactable = other.gameObject;
+            timer = 2f;
+            interactable = other.gameObject.GetComponent<ChildJumpObject>();
+            Debug.Log(jumpVaild);
         }
     }
 }
