@@ -23,13 +23,11 @@ public class AudioManager : MonoBehaviour
 
 
     private void Start() {
-        sfxAudio = GetComponent<AudioSource>();
-
         if (openingSong != null && mainSong != null) {
             openingSong.Init();
             mainSong.Init();
 
-            currentSong = openingSong;
+            currentSong = mainSong;
             currentSong.TurnOn();
         }
     }
