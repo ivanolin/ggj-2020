@@ -1,7 +1,31 @@
 fileFormatVersion: 2
-guid: d6a0c9f9b4f128141a3e6283aed66c19
+guid: 4f722afac62eb044696cd5734d1aef0c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1151375802007313940
+    second: frontLittlehurt_0
+  - first:
+      213: -2583710737572115407
+    second: frontLittlehurt_1
+  - first:
+      213: -5654281864505134833
+    second: frontLittlehurt_2
+  - first:
+      213: -3659993264913414897
+    second: frontLittlehurt_3
+  - first:
+      213: 6566048461880710962
+    second: frontLittlehurt_4
+  - first:
+      213: -2993553502903443732
+    second: frontLittlehurt_5
+  - first:
+      213: 9006562962824397911
+    second: frontLittlehurt_6
+  - first:
+      213: 6274079246350124992
+    second: frontLittlehurt_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,11 +120,53 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: frontLittlehurt_0
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 7
+        width: 424
+        height: 901
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1af5eeecd7500f0800000000000000
+      internalID: -1151375802007313940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontLittlehurt_1
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 0
+        width: 377
+        height: 909
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13cc6a4f5c0d42cd0800000000000000
+      internalID: -2583710737572115407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 6c45fbc65a6c41d44bd6730036f3c360
     internalID: 0
     vertices: []
     indices: 

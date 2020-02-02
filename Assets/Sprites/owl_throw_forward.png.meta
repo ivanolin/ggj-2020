@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: d77da3fa3ccab483ca05d24c7ab5b070
+guid: 4fae8ea39a0f4424caf8be73377bb514
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8176049239398014628
-    second: sidestep_0
+      213: 946104436042873986
+    second: owl throw sprite_0
   - first:
-      213: -4575692791458369205
-    second: sidestep_1
+      213: -4401566004801210658
+    second: owl throw sprite_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -88,17 +88,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sidestep_0
+      name: owl throw sprite_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 15
         y: 0
-        width: 594
-        height: 908
+        width: 537
+        height: 650
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -106,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c51249b0986d88e80800000000000000
-      internalID: -8176049239398014628
+      spriteID: 28cb1cec8fc312d00800000000000000
+      internalID: 946104436042873986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sidestep_1
+      name: owl throw sprite_1
       rect:
         serializedVersion: 2
-        x: 594
+        x: 572
         y: 0
-        width: 594
-        height: 908
+        width: 537
+        height: 650
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b41fec336afdf70c0800000000000000
-      internalID: -4575692791458369205
+      spriteID: ed673640a0f7ae2c0800000000000000
+      internalID: -4401566004801210658
       vertices: []
       indices: 
       edges: []
@@ -136,7 +148,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a0290138a7bfd4991a764e69f5e155fb
+    spriteID: e84299638971efc4c886dc5c8b4e284f
     internalID: 0
     vertices: []
     indices: 

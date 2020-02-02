@@ -1,13 +1,52 @@
 fileFormatVersion: 2
-guid: 29b35ed4949424028899d9a4b45f2730
+guid: 0082c839255365b4b9a4efe0eccf10b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3198213907200289177
-    second: FrontStep_0
+      213: -1452480577544338715
+    second: sideHurt_0
   - first:
-      213: -7550478922629071616
-    second: FrontStep_1
+      213: 2950699787949635356
+    second: sideHurt_1
+  - first:
+      213: 5080902879469948156
+    second: sideHurt_2
+  - first:
+      213: -5058780674349166728
+    second: sideHurt_3
+  - first:
+      213: -8214301630620711829
+    second: sideHurt_4
+  - first:
+      213: -3929891604328805571
+    second: sideHurt_5
+  - first:
+      213: 2134057177354564446
+    second: sideHurt_6
+  - first:
+      213: -1648083427324691348
+    second: sideHurt_7
+  - first:
+      213: 3418153328802330203
+    second: sideHurt_8
+  - first:
+      213: 2572702908711869159
+    second: sideHurt_9
+  - first:
+      213: -8493726224158130725
+    second: sideHurt_10
+  - first:
+      213: 9002715845482929343
+    second: sideHurt_11
+  - first:
+      213: 1676271232044789146
+    second: sideHurt_12
+  - first:
+      213: 9002722503088142672
+    second: sideHurt_13
+  - first:
+      213: 6737346356071799024
+    second: sideHurt_14
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -88,17 +127,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FrontStep_0
+      name: sideHurt_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 564.5
-        height: 909
+        x: 163
+        y: 6
+        width: 400
+        height: 898
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -106,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 999236e8a96526c20800000000000000
-      internalID: 3198213907200289177
+      spriteID: 5e2c05c3c90c7dbe0800000000000000
+      internalID: -1452480577544338715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrontStep_1
+      name: sideHurt_1
       rect:
         serializedVersion: 2
-        x: 564
-        y: 0
-        width: 564
-        height: 909
+        x: 572
+        y: 5
+        width: 428
+        height: 895
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00dbe9c8c6f473790800000000000000
-      internalID: -7550478922629071616
+      spriteID: c17fe8bd2ddf2f820800000000000000
+      internalID: 2950699787949635356
       vertices: []
       indices: 
       edges: []
@@ -136,7 +187,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2fb8e0e0cf74445a19f5602b2d011e48
+    spriteID: b559c154bd22473469df57153617f8d6
     internalID: 0
     vertices: []
     indices: 
