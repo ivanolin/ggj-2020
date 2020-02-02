@@ -60,7 +60,7 @@ public class PlayerMovementController : MonoBehaviour
     IEnumerator PlayFootstepSounds() {
         while (true) {
             if (isMoving) {
-                Managers.AudioManager?.PlaySoundEffect(footstepSounds[Random.Range(0, footstepSounds.Length)], footstepVolume);
+                Managers.AudioManager?.PlayRandomSoundEffect(footstepSounds, footstepVolume, 0.15f);
             }
 
             yield return new WaitForSeconds(footstepSoundSpeed);
