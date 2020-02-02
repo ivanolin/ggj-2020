@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
     public GameObject creditsGameObject;
+    public ScreenWipeCanvas screenWipe;
     private bool credsOn;
 
     void Awake()
@@ -19,7 +21,8 @@ public class StartMenu : MonoBehaviour
     public void Play()
     {
         Managers.AudioManager?.SwitchToMain();
-        SceneManager.LoadScene(1);
+        screenWipe.WipeScreen();
+        StartCoroutine(LoadSceneWithDelay(1, screenWipe.wipeTime));
     }
 
     public void ToggleCredits()
@@ -31,5 +34,11 @@ public class StartMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+
+    IEnumerator LoadSceneWithDelay(int buildIndex, float delay) {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(buildIndex);
     }
 }
