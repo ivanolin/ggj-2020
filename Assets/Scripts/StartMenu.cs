@@ -3,26 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    private GameObject creditsGameObject;
+    public GameObject creditsGameObject;
+    private bool credsOn;
 
     void Awake()
     {
-        creditsGameObject = FindObjectOfType<Credits>().gameObject;
+        //creditsGameObject.SetActive(false);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (creditsGameObject.activeInHierarchy)
-            {
-                ToggleCredits(false);
-            }
-            else
-            {
-                ToggleCredits(true);
-            }
-        }
+
     }
 
     public void Play()
@@ -30,9 +21,10 @@ public class StartMenu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void ToggleCredits(bool enabled)
+    public void ToggleCredits()
     {
-        creditsGameObject.SetActive(enabled);
+        credsOn = !credsOn;
+        creditsGameObject.SetActive(credsOn);
     }
 
     public void Quit()

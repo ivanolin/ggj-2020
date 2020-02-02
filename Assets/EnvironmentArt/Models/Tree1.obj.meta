@@ -3,7 +3,37 @@ guid: 75c21eb7269fff343a21442cf9a6dc33
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__lambert4SG6
+    second: {fileID: -7394202989295985249, guid: e47826709a48a9147b78505049238b13,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__lambert5SG3
+    second: {fileID: -1784947084938303131, guid: 5b446a6769fdeab409f71da17ee9c669,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__pasted__lambert5SG3
+    second: {fileID: -1784947084938303131, guid: 5b446a6769fdeab409f71da17ee9c669,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__pasted__pasted__lambert5SG3
+    second: {fileID: -1784947084938303131, guid: 5b446a6769fdeab409f71da17ee9c669,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__pasted__pasted__pasted__lambert5SG3
+    second: {fileID: -1784947084938303131, guid: 5b446a6769fdeab409f71da17ee9c669,
+      type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
