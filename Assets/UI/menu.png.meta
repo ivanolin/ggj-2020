@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: 080cfa77296aa4a47ae183137574d39a
+guid: 1e15ff6d25cba4d5f95aef8f903c1f91
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -3620862162168837853
-    second: bramble_spritesheet_0
-  - first:
-      213: -3238284938151896252
-    second: bramble_spritesheet_1
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -46,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -90,49 +84,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: bramble_spritesheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 278
-        height: 283
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32906433c0d10cdc0800000000000000
-      internalID: -3620862162168837853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bramble_spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 277
-        y: 0
-        width: 277.5
-        height: 283
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44b55f3810d4f03d0800000000000000
-      internalID: -3238284938151896252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
