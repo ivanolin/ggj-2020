@@ -1,7 +1,16 @@
 fileFormatVersion: 2
-guid: ea97465d73313464f905d356bdeda117
+guid: 04915cdfae5911b4fb0a3460aa42e16a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1474041803219992219
+    second: backstepFixed_0
+  - first:
+      213: -1572211470722525917
+    second: backstepFixed_0
+  - first:
+      213: 8854503317194983422
+    second: backstepFixed_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,11 +105,53 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: backstepFixed_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 558
+        height: 909
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3251acf4ff16e2ae0800000000000000
+      internalID: -1572211470722525917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backstepFixed_1
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 0
+        width: 557
+        height: 909
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7cce39ad381ea70800000000000000
+      internalID: 8854503317194983422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 53f93e82d1e45624882a60eeaa0f5af8
     internalID: 0
     vertices: []
     indices: 
