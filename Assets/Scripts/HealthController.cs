@@ -43,6 +43,7 @@ public class HealthController : MonoBehaviour
         if (other.tag == "Hazard")
         {
             TakeDamage();
+            other.enabled = false;
             Instantiate(woodPiece, transform.position, transform.rotation).GetComponentInChildren<Projectile>().DamageDrop();
         }
 

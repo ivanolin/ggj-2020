@@ -9,10 +9,6 @@ public class Projectile : MonoBehaviour
 
     Rigidbody rigidbody;
 
-    public AudioClip hitSound;
-
-    public AudioSource throwAudio;
-
     public float fastSpeed;
     
     // Case 1: throw: can heal immediately, but can't pick up for interval
@@ -40,7 +36,7 @@ public class Projectile : MonoBehaviour
         StartCoroutine(throwCoroutine());
     
         // start woosh loop
-        throwAudio.Play();
+        // throwAudio.Play();
     }
 
     public void DamageDrop()
@@ -54,7 +50,7 @@ public class Projectile : MonoBehaviour
         
         yield return new WaitForSeconds(0.5f);
         canPickUp = true;
-        Debug.Log("Ready for pick up");
+        //Debug.Log("Ready for pick up");
     }
 
     IEnumerator damageDropCoroutine()
@@ -64,13 +60,13 @@ public class Projectile : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision other) {
-        // stop woosh loop
-        throwAudio.Stop();
+    // private void OnCollisionEnter(Collision other) {
+    //     // stop woosh loop
+    //     throwAudio.Stop();
 
-        // play hit sound
-        float hitVolume = Mathf.Clamp(rigidbody.velocity.magnitude / fastSpeed, 0, 1);
-        Managers.AudioManager?.PlaySoundEffect(hitSound, hitVolume);
-    }
+    //     // play hit sound
+    //     float hitVolume = Mathf.Clamp(rigidbody.velocity.magnitude / fastSpeed, 0, 1);
+    //     Managers.AudioManager?.PlaySoundEffect(hitSound, hitVolume);
+    // }
 
 }
