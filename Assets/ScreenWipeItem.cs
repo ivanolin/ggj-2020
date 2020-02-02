@@ -41,6 +41,9 @@ public class ScreenWipeItem : MonoBehaviour
             yield return 0;
             timer -= Time.deltaTime;
         }
+
+        rectTransform.anchoredPosition = newPosition;
+        rectTransform.rotation = Quaternion.Euler(0, 0, newRotation);
     }
 
 

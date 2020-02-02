@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ScreenWipeCanvas : MonoBehaviour
 {
+    public bool dontWipeOnLoad;
+
     public float wipeTime;
 
     // Start is called before the first frame update
@@ -12,7 +14,7 @@ public class ScreenWipeCanvas : MonoBehaviour
         foreach (Transform t in transform) {
             ScreenWipeItem item = t.GetComponent<ScreenWipeItem>();
 
-            item?.LeaveScreen(wipeTime);
+            item?.LeaveScreen(dontWipeOnLoad ? 0f : wipeTime);
         }   
     }
 
