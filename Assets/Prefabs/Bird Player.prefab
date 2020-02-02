@@ -56,9 +56,11 @@ MonoBehaviour:
   minSpeed: 0
   maxSpeed: 0
   LastDirection: {x: 0, y: 0, z: 0}
+  cross: 0
   footstepSounds: []
   footstepSoundSpeed: 0
   footstepVolume: 0
+  canStop: 1
 --- !u!114 &34562731558769719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,6 +73,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a814cdf7ea4d43f38d748a521050929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThrowDelay: 0.25
+  ThrowCooldown: 0.75
   ProjectilePrefab: {fileID: 8250075569355865754, guid: 8f4f2e6d4d35d430a885cc24dabe49b6,
     type: 3}
   ThrowAxis: BirdThrow
@@ -78,6 +82,7 @@ MonoBehaviour:
   numberOfProjectiles: 3
   Text: {fileID: 9157108662884439116}
   throwSound: {fileID: 8300000, guid: 9185658473b572c43a6b39c387b725a7, type: 3}
+  animator: {fileID: 0}
 --- !u!143 &34562731558769727
 CharacterController:
   m_ObjectHideFlags: 0
@@ -90,7 +95,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 10.24
-  m_Radius: 5.12
+  m_Radius: 2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -125,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpVaild: 0
+  cross: 0
 --- !u!1 &6815616428411884490
 GameObject:
   m_ObjectHideFlags: 0

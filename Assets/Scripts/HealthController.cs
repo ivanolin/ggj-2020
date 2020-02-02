@@ -31,7 +31,7 @@ public class HealthController : MonoBehaviour
     {
         maxHealth = health;
         movementController = GetComponent<PlayerMovementController>();
-        health /= 2;
+        health = maxHealth / 3 * 2;
         SetHealthBar();
         animator = GetComponentInChildren<Animator>();
     }
@@ -88,11 +88,11 @@ public class HealthController : MonoBehaviour
         if (health > 0) {
             Managers.AudioManager.PlayRandomSoundEffect(damageSounds, 0.95f, 0.05f);
 
-            if (health >= maxHealth * (2 / 3))
+            if (health >= maxHealth * (2f / 3f))
             {
                 GetComponentInChildren<SpriteRenderer>().sprite = Damage1Sprite;
             }
-            else if (health >= maxHealth / 3 && health < maxHealth * (2 / 3))
+            else if (health >= maxHealth / 3f && health < maxHealth * (2f / 3f))
             {
                 GetComponentInChildren<SpriteRenderer>().sprite = Damage2Sprite;
             }
