@@ -100,6 +100,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 06a164bbb894f7947b3640de8fc8cf5d, type: 3}
   - {fileID: 8300000, guid: 734da7779eab0944a91deb14203e1214, type: 3}
   deathSound: {fileID: 8300000, guid: 3d91dc487f0016243bfbbc00592defa4, type: 3}
+  healSounds:
+  - {fileID: 8300000, guid: 91bdf154909888a43b41920ca82c11fc, type: 3}
+  - {fileID: 8300000, guid: 72b97844b76095a429ccf00e0442cad4, type: 3}
+  - {fileID: 8300000, guid: 4843f71a5dbab104b940b993293fac2a, type: 3}
 --- !u!54 &3216727380786771821
 Rigidbody:
   m_ObjectHideFlags: 0
