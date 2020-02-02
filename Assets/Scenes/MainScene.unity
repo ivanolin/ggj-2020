@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1648,7 +1648,7 @@ Transform:
   - {fileID: 1096895974}
   - {fileID: 466496149}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &620819729
 GameObject:
@@ -3498,6 +3498,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 829316067054016021, guid: 245448f8422e72a42bfda57b7c9c34dd,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 829316067054016024, guid: 245448f8422e72a42bfda57b7c9c34dd,
         type: 3}
@@ -5950,7 +5955,7 @@ PrefabInstance:
     - target: {fileID: 3216727380786771809, guid: 0ee56a91b53304e599272c7a6e3ab896,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3216727380786771809, guid: 0ee56a91b53304e599272c7a6e3ab896,
         type: 3}

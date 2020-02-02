@@ -130,6 +130,7 @@ MonoBehaviour:
   canHeal: 0
   canPickUp: 0
   hitSound: {fileID: 8300000, guid: fc8037ab78058f44abd612803bab3178, type: 3}
+  throwAudio: {fileID: 6440802685809141771}
   fastSpeed: 50
 --- !u!82 &6440802685809141771
 AudioSource:
@@ -287,4 +288,5 @@ MonoBehaviour:
   canHeal: 0
   canPickUp: 0
   hitSound: {fileID: 0}
+  throwAudio: {fileID: 0}
   fastSpeed: 0
