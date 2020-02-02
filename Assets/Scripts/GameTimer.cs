@@ -13,7 +13,7 @@ public class GameTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Managers.AudioManager?.SwitchToMain(true);
     }
 
     // Update is called once per frame
@@ -29,6 +29,8 @@ public class GameTimer : MonoBehaviour
         {
             //TRIGGER BIRD WIN ANIMATION
             SceneManager.LoadScene(3);
+
+            Managers.AudioManager?.EndMain(false);
         }
     }
 }
