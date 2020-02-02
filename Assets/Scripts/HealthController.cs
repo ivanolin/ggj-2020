@@ -5,17 +5,23 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
-    public int health = 15;
-    private int maxHealth;
-
+    public int health = 3;
+    public int maxHealth;
+    private float newSpeed;
+    private float minSpeed;
+    private float maxSpeed;
     public SpriteRenderer spriterender;
     public Image HealthBar;
     public GameObject woodPiece;
+    public PlayerMovementController movementController;
+
+    public AudioClip damageSound;
 
     // Start is called before the first frame update
     void Start()
     {
         maxHealth = health;
+        movementController = GetComponent<PlayerMovementController>();
         health /= 2;
         SetHealthBar();
     }
@@ -50,7 +56,13 @@ public class HealthController : MonoBehaviour
     {
         Debug.Log("TOOK DAMAGE");
 
+        Managers.AudioManager?.PlaySoundEffect(damageSound);
+
         health--;
+        maxSpeed = movementController.maxSpeed;
+        minSpeed = movementController.minSpeed;
+        newSpeed = Vector3.Lerp(new Vector3(minSpeed,0,0),new Vector3(maxSpeed,0,0),(float)health/maxHealth).x;
+        movementController.Speed = newSpeed;
         if(health < 0)
         {
             health = 0;
@@ -61,10 +73,10 @@ public class HealthController : MonoBehaviour
     public void Heal()
     {
         health++;
-        if(health > maxHealth)
-        {
-            health = maxHealth;
-        }
+        maxSpeed = movementController.maxSpeed;
+        minSpeed = movementController.minSpeed;
+        newSpeed = Vector3.Lerp(new Vector3(minSpeed, 0, 0), new Vector3(maxSpeed, 0, 0), (float)health / maxHealth).x;
+        movementController.Speed = newSpeed;
         SetHealthBar();
     }
 }

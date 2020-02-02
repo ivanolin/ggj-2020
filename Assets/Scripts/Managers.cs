@@ -13,7 +13,6 @@ public class Managers : MonoBehaviour
     private void Awake()
     {
         // very basic singleton pattern
-
         if (instance == null)
         {
             instance = this;
@@ -24,5 +23,8 @@ public class Managers : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+
+
+        audioManager = GetComponent<AudioManager>();
     }
 }
