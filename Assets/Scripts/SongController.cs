@@ -27,7 +27,6 @@ public class SongController : MonoBehaviour
                 if (Mathf.Abs(i - intensity) >= 1) {
                     audioSource.volume = 0;
                 } else {
-                    Debug.Log(audioSource.clip + " " + currentMaxVolume);
                     audioSource.volume = currentMaxVolume * (1 - (i - intensity) * (i - intensity));
                 }
 
