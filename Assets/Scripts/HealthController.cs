@@ -17,6 +17,7 @@ public class HealthController : MonoBehaviour
 
     public AudioClip[] damageSounds;
     public AudioClip deathSound;
+    public AudioClip[] healSounds;
 
     // Start is called before the first frame update
     void Start()
@@ -91,5 +92,7 @@ public class HealthController : MonoBehaviour
         newSpeed = Vector3.Lerp(new Vector3(minSpeed, 0, 0), new Vector3(maxSpeed, 0, 0), (float)health / maxHealth).x;
         movementController.Speed = newSpeed;
         SetHealthBar();
+    
+        Managers.AudioManager?.PlayRandomSoundEffect(healSounds, 0.95f, 0.05f);
     }
 }
