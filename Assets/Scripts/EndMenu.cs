@@ -6,13 +6,18 @@ using UnityEngine.SceneManagement;
 public class EndMenu : MonoBehaviour
 {
 
+    public ScreenWipeCanvas screenWipe;
+
     public void MainMenu()
     {
-        SceneManager.LoadScene(0);
+        screenWipe.WipeScreen();
+        Managers.AudioManager?.SwitchToOpening();
+        Managers.Instance.LoadSceneWithDelay(0, screenWipe.wipeTime + 0.5f);
     }
 
     public void Quit()
     {
-        Application.Quit();
+        screenWipe.WipeScreen();
+        Managers.Instance.QuitWithDelay(screenWipe.wipeTime + 0.5f);
     }
 }

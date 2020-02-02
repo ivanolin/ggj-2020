@@ -47,6 +47,7 @@ public class HealthController : MonoBehaviour
 
 
             Managers.AudioManager?.EndMain(true);
+            Managers.Instance.LoadSceneWithDelay(2, 0f); // add delay here to view poof animation and then move on
         }
     }
 
