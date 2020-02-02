@@ -11,6 +11,8 @@ public class Projectile : MonoBehaviour
 
     public AudioClip hitSound;
 
+    public AudioSource throwAudio;
+
     public float fastSpeed;
     
     // Case 1: throw: can heal immediately, but can't pick up for interval
@@ -36,6 +38,9 @@ public class Projectile : MonoBehaviour
     {
         canHeal = true;
         StartCoroutine(throwCoroutine());
+    
+        // start woosh loop
+        throwAudio.Play();
     }
 
     public void DamageDrop()
@@ -60,8 +65,10 @@ public class Projectile : MonoBehaviour
 
 
     private void OnCollisionEnter(Collision other) {
-        Debug.Log(gameObject);
+        // stop woosh loop
+        throwAudio.Stop();
 
+        // play hit sound
         float hitVolume = Mathf.Clamp(rigidbody.velocity.magnitude / fastSpeed, 0, 1);
         Managers.AudioManager?.PlaySoundEffect(hitSound, hitVolume);
     }
