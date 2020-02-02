@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
     public float intensityFadeSpeed;
 
 
-    AudioSource sfxAudio;
+    public AudioSource sfxAudio;
 
 
     public SongController openingSong;

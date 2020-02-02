@@ -142,7 +142,7 @@ MonoBehaviour:
   woodPiece: {fileID: 8250075569355865754, guid: 8f4f2e6d4d35d430a885cc24dabe49b6,
     type: 3}
   movementController: {fileID: 3216727380786771810}
-  damageSound: {fileID: 8300000, guid: 22967283173bbe649ac62e94f7625793, type: 3}
+  damageSound: {fileID: 8300000, guid: 499a0190985ba2046b29250e19b7cc68, type: 3}
 --- !u!54 &3216727380786771821
 Rigidbody:
   m_ObjectHideFlags: 0

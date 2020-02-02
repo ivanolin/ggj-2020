@@ -123,6 +123,7 @@ MonoBehaviour:
   ThrowFactor: 1500
   numberOfProjectiles: 3
   Text: {fileID: 9157108662884439116}
+  throwSound: {fileID: 8300000, guid: 9185658473b572c43a6b39c387b725a7, type: 3}
 --- !u!143 &34562731558769727
 CharacterController:
   m_ObjectHideFlags: 0

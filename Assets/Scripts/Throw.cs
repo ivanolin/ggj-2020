@@ -11,6 +11,9 @@ public class Throw : MonoBehaviour
     Rigidbody Rigidbody;
     public int numberOfProjectiles = 3;
     public TextMeshProUGUI Text;
+
+    public AudioClip throwSound;
+
     
     // Start is called before the first frame update
     void Start()
@@ -42,6 +45,8 @@ public class Throw : MonoBehaviour
         GameObject projectileObject = Instantiate(ProjectilePrefab, GetComponent<Rigidbody>().position + Vector3.up * 0.5f, Quaternion.identity);
         projectileObject.GetComponent<Rigidbody>().AddForce(throwDirection * ThrowFactor);
         projectileObject.GetComponentInChildren<Projectile>().Throw();
+
+        Managers.AudioManager?.PlaySoundEffect(throwSound);
 
         UpdateText();
     }
