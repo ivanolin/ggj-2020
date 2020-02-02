@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3216727380786771812}
   - component: {fileID: 3216727380786771823}
   - component: {fileID: 3216727380786771821}
-  - component: {fileID: 178854570387191463}
   m_Layer: 9
   m_Name: Tree Player
   m_TagString: Untagged
@@ -95,7 +94,11 @@ MonoBehaviour:
   woodPiece: {fileID: 8250075569355865754, guid: 8f4f2e6d4d35d430a885cc24dabe49b6,
     type: 3}
   movementController: {fileID: 3216727380786771810}
-  damageSound: {fileID: 8300000, guid: 499a0190985ba2046b29250e19b7cc68, type: 3}
+  damageSounds:
+  - {fileID: 8300000, guid: 499a0190985ba2046b29250e19b7cc68, type: 3}
+  - {fileID: 8300000, guid: 06a164bbb894f7947b3640de8fc8cf5d, type: 3}
+  - {fileID: 8300000, guid: 734da7779eab0944a91deb14203e1214, type: 3}
+  deathSound: {fileID: 8300000, guid: 3d91dc487f0016243bfbbc00592defa4, type: 3}
 --- !u!54 &3216727380786771821
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -112,19 +115,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!65 &178854570387191463
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3216727380786771822}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.24, y: 10.24, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5418506233632345217
 GameObject:
   m_ObjectHideFlags: 0

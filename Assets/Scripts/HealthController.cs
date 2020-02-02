@@ -15,7 +15,8 @@ public class HealthController : MonoBehaviour
     public GameObject woodPiece;
     public PlayerMovementController movementController;
 
-    public AudioClip damageSound;
+    public AudioClip[] damageSounds;
+    public AudioClip deathSound;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,10 @@ public class HealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(health <= 0)
+        {
+            //TRIGGER POOF ANIMATION
+        }
     }
 
     public void OnTriggerEnter(Collider other)
@@ -42,6 +46,7 @@ public class HealthController : MonoBehaviour
         if (other.tag == "Hazard")
         {
             TakeDamage();
+            other.enabled = false;
             Instantiate(woodPiece, transform.position, transform.rotation).GetComponentInChildren<Projectile>().DamageDrop();
         }
 
@@ -69,7 +74,9 @@ public class HealthController : MonoBehaviour
 
         // a different sound will play if the player has actually died
         if (health > 0) {
-            Managers.AudioManager.PlaySoundEffect(damageSound);
+            Managers.AudioManager.PlayRandomSoundEffect(damageSounds, 0.95f, 0.05f);
+        } else {
+            Managers.AudioManager.PlaySoundEffect(deathSound);
         }
 
         // use the current health to set the intensity of the background music

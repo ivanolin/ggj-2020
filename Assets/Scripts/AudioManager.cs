@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
             mainSong.Init();
 
             currentSong = openingSong;
-            currentSong.TurnOn(0f);
+            currentSong.TurnOn(0.1f);
         }
     }
 
@@ -65,12 +65,23 @@ public class AudioManager : MonoBehaviour
 
     
 
-    public void PlaySoundEffect(AudioClip sound) {
-        sfxAudio.PlayOneShot(sound);
+    public void PlaySoundEffect(AudioClip sound, float volume = 1f, float volumeVariation = 0f) {
+        if (sound == null) {
+            Debug.LogWarning("There is no AudioClip to play here!");
+            return;
+        }
+        
+        sfxAudio.PlayOneShot(sound, volume + Random.Range(-volumeVariation, volumeVariation));
     }
 
-    public void PlaySoundEffect(AudioClip sound, float volume) {
-        sfxAudio.PlayOneShot(sound, volume);
+
+    public void PlayRandomSoundEffect(AudioClip[] sounds, float volume = 1f, float volumeVariation = 0f) {
+        if (sounds == null || sounds.Length == 0) {
+            Debug.LogWarning("There are no AudioClips to play here!");
+            return;
+        }
+
+        PlaySoundEffect(sounds[Random.Range(0, sounds.Length)], volume, volumeVariation);
     }
 
 
@@ -92,7 +103,8 @@ public class AudioManager : MonoBehaviour
     public void SwitchToMain() {
         if (currentSong == mainSong) return;
 
-        SwitchSong(mainSong, 1.5f, 1f);
+        SwitchSong(mainSong, 1f, 1.4f);
+        mainSong.PlayTransitionSound();
     }
 
     public void SwitchToOpening() {
