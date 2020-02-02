@@ -20,9 +20,9 @@ public class StartMenu : MonoBehaviour
 
     public void Play()
     {
-        Managers.AudioManager?.SwitchToMain();
+        Managers.AudioManager?.SwitchToMain(false);
         screenWipe.WipeScreen();
-        StartCoroutine(LoadSceneWithDelay(1, screenWipe.wipeTime + 0.5f));
+        Managers.Instance.LoadSceneWithDelay(1, screenWipe.wipeTime + 0.5f);
     }
 
     public void ToggleCredits()
@@ -33,12 +33,16 @@ public class StartMenu : MonoBehaviour
 
     public void Quit()
     {
-        Application.Quit();
+        screenWipe.WipeScreen();
+        Managers.Instance.QuitWithDelay(screenWipe.wipeTime + 0.5f);
     }
 
 
     IEnumerator LoadSceneWithDelay(int buildIndex, float delay) {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(buildIndex);
+
+        if (buildIndex == -1) {
+            SceneManager.LoadScene(buildIndex);
+        }
     }
 }

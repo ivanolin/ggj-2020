@@ -10,10 +10,14 @@ public class GameTimer : MonoBehaviour
     private int convert;
     public Text display;
 
+
+    AudioSource clockSource;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        Managers.AudioManager?.SwitchToMain(true);
+        clockSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,13 +26,18 @@ public class GameTimer : MonoBehaviour
         if(timer > 0)
         {
             timer -= Time.deltaTime;
-            convert = (int)timer;
+            convert = Mathf.CeilToInt(timer);
             display.text = convert.ToString();
         }
         else
         {
             //TRIGGER BIRD WIN ANIMATION
             SceneManager.LoadScene(3);
+
+            Managers.AudioManager?.EndMain(false);
         }
+
+
+        clockSource.volume = Mathf.Clamp((10 - timer) / 10 , 0, 1);
     }
 }
