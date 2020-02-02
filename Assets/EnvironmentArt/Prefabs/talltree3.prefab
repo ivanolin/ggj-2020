@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6629405370150551894}
   - component: {fileID: 7094775254437141357}
   m_Layer: 0
-  m_Name: talltree
+  m_Name: talltree3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,10 +58,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 685f0eda7f15a3e4fb27273326f883d8, type: 2}
-  - {fileID: 2100000, guid: 685f0eda7f15a3e4fb27273326f883d8, type: 2}
-  - {fileID: 2100000, guid: 685f0eda7f15a3e4fb27273326f883d8, type: 2}
-  - {fileID: 2100000, guid: 685f0eda7f15a3e4fb27273326f883d8, type: 2}
+  - {fileID: 2100000, guid: cc7be462489863145ba9743a3dcbd95e, type: 2}
+  - {fileID: 2100000, guid: cc7be462489863145ba9743a3dcbd95e, type: 2}
+  - {fileID: 2100000, guid: cc7be462489863145ba9743a3dcbd95e, type: 2}
+  - {fileID: 2100000, guid: cc7be462489863145ba9743a3dcbd95e, type: 2}
   - {fileID: 2100000, guid: dbb134c47106b514184a1a1d6bf0bc2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
