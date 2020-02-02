@@ -5,6 +5,8 @@ using TMPro;
 
 public class Throw : MonoBehaviour
 {
+    public float ThrowDelay = 0.25f;
+    public float ThrowCooldown = 0.75f;
     public GameObject ProjectilePrefab;
     public string ThrowAxis;
     public float ThrowFactor;
@@ -14,10 +16,13 @@ public class Throw : MonoBehaviour
 
     public AudioClip throwSound;
 
+    public Animator animator;
+
     
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         Rigidbody = GetComponent<Rigidbody>();
         UpdateText();
     }
@@ -28,6 +33,7 @@ public class Throw : MonoBehaviour
     {
         if (ThrowDown == false && Input.GetAxis(ThrowAxis) > 0 && numberOfProjectiles > 0)
         {
+            animator.SetBool("Throwing", true);
             numberOfProjectiles--;
             ThrowObject();
 
@@ -35,11 +41,23 @@ public class Throw : MonoBehaviour
         }
         else if(Input.GetAxis(ThrowAxis) == 0)
         {
+            animator.SetBool("Throwing", false);
             ThrowDown = false;
         }
     }
     void ThrowObject()
     {
+        if(canThrow)
+            StartCoroutine(ThrowRoutine());
+    }
+
+    bool canThrow = true;
+    IEnumerator ThrowRoutine()
+    {
+        canThrow = false;
+
+        yield return new WaitForSeconds(ThrowDelay);
+
         Vector3 throwDirection = GetComponent<PlayerMovementController>().LastDirection.normalized;
         Debug.Log($"{throwDirection.x} {throwDirection.y} {throwDirection.z}");
         GameObject projectileObject = Instantiate(ProjectilePrefab, GetComponent<Rigidbody>().position + Vector3.up * 0.5f, Quaternion.identity);
@@ -49,6 +67,10 @@ public class Throw : MonoBehaviour
         Managers.AudioManager?.PlaySoundEffect(throwSound);
 
         UpdateText();
+
+        yield return new WaitForSeconds(ThrowCooldown);
+
+        canThrow = true;
     }
 
     public void OnTriggerEnter(Collider other)
