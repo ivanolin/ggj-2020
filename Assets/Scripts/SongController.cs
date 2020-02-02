@@ -12,6 +12,9 @@ public class SongController : MonoBehaviour
 
     List<AudioSource> audioSources;
 
+    public AudioClip transitionSound;
+    public AudioSource transitionSource;
+
 
     public void Init() {
         currentMaxVolume = 0;
@@ -43,6 +46,11 @@ public class SongController : MonoBehaviour
 
     public void TurnOn(float turnOnDelay) {
         StartCoroutine(TurnOnWithDelay(turnOnDelay));
+    }
+
+
+    public void PlayTransitionSound() {
+        transitionSource.PlayOneShot(transitionSound);
     }
 
     IEnumerator TurnOnWithDelay(float turnOnDelay) {

@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
             mainSong.Init();
 
             currentSong = openingSong;
-            currentSong.TurnOn(0f);
+            currentSong.TurnOn(0.1f);
         }
     }
 
@@ -97,7 +97,8 @@ public class AudioManager : MonoBehaviour
     public void SwitchToMain() {
         if (currentSong == mainSong) return;
 
-        SwitchSong(mainSong, 1.5f, 1f);
+        SwitchSong(mainSong, 1f, 1.4f);
+        mainSong.PlayTransitionSound();
     }
 
     public void SwitchToOpening() {
