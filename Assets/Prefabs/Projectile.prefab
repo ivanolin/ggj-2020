@@ -123,3 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc54725154104ef1a46068296cd1202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canHeal: 0
+  canPickUp: 0
+  hitSound: {fileID: 8300000, guid: fc8037ab78058f44abd612803bab3178, type: 3}

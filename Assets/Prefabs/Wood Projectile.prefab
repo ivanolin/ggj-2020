@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2886161323790226043}
   - component: {fileID: 5396246524399342411}
   - component: {fileID: 1405168537687550913}
+  - component: {fileID: -3802522761590146265}
   m_Layer: 8
   m_Name: Wood Projectile
   m_TagString: Untagged
@@ -113,6 +114,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5.3249993
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3802522761590146265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8250075569355865754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc54725154104ef1a46068296cd1202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canHeal: 0
+  canPickUp: 0
+  hitSound: {fileID: 8300000, guid: fc8037ab78058f44abd612803bab3178, type: 3}
+  fastSpeed: 50
 --- !u!1 &8676609640043012603
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,3 +189,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canHeal: 0
   canPickUp: 0
+  hitSound: {fileID: 0}
+  fastSpeed: 0

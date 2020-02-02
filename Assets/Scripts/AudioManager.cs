@@ -63,6 +63,10 @@ public class AudioManager : MonoBehaviour
         sfxAudio.PlayOneShot(sound);
     }
 
+    public void PlaySoundEffect(AudioClip sound, float volume) {
+        sfxAudio.PlayOneShot(sound, volume);
+    }
+
 
     public void SwitchSong(SongController newSong, float fadeOutTime) {
         currentSong.TurnOff(fadeOutTime);

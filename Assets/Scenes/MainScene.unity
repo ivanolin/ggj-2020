@@ -421,6 +421,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1963679397192649757, guid: dc9548a3ced436345a5e78fe4d45e5de,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8703871267199939027, guid: dc9548a3ced436345a5e78fe4d45e5de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -429,12 +434,12 @@ PrefabInstance:
     - target: {fileID: 8703871267199939027, guid: dc9548a3ced436345a5e78fe4d45e5de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8703871267199939027, guid: dc9548a3ced436345a5e78fe4d45e5de,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8703871267199939027, guid: dc9548a3ced436345a5e78fe4d45e5de,
         type: 3}
@@ -784,6 +789,16 @@ PrefabInstance:
       propertyPath: ThrowAxis
       value: BirdThrow
       objectReference: {fileID: 0}
+    - target: {fileID: 34562731558769719, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
+        type: 3}
+      propertyPath: ThrowFactor
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 34562731558769721, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
+        type: 3}
+      propertyPath: footstepSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 34562731558769721, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
         type: 3}
       propertyPath: minSpeed
@@ -793,6 +808,31 @@ PrefabInstance:
         type: 3}
       propertyPath: maxSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 34562731558769721, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
+        type: 3}
+      propertyPath: footstepSoundSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 34562731558769721, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3601da7a60aab3d4da72d8d529178d53, type: 3}
+    - target: {fileID: 34562731558769721, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8635330471e567f45ba2c49b29cc2126, type: 3}
+    - target: {fileID: 34562731558769721, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c94121562246f4db53bfcb3fdf2c77, type: 3}
+    - target: {fileID: 34562731558769721, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
+        type: 3}
+      propertyPath: footstepVolume
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 34562731558769722, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
         type: 3}
@@ -854,10 +894,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2608876651893895321, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5441379317504616209, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9157108662884439116, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9157108662884439116, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
         type: 3}
@@ -867,17 +917,17 @@ PrefabInstance:
     - target: {fileID: 9157108662884439116, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9157108662884439116, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9157108662884439116, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c, type: 3}
@@ -3359,6 +3409,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3216727380786771810, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: footstepSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3216727380786771810, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: footstepSoundSpeed
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3216727380786771810, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3601da7a60aab3d4da72d8d529178d53, type: 3}
+    - target: {fileID: 3216727380786771810, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8635330471e567f45ba2c49b29cc2126, type: 3}
+    - target: {fileID: 3216727380786771810, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43c94121562246f4db53bfcb3fdf2c77, type: 3}
+    - target: {fileID: 3216727380786771810, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: footstepVolume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3216727380786771822, guid: 0ee56a91b53304e599272c7a6e3ab896,
         type: 3}
       propertyPath: m_Name
@@ -3387,6 +3467,16 @@ PrefabInstance:
     - target: {fileID: 5017645908848101475, guid: 0ee56a91b53304e599272c7a6e3ab896,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418506233632345222, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418506235066378769, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5418506235664314770, guid: 0ee56a91b53304e599272c7a6e3ab896,
