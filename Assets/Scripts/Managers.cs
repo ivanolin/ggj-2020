@@ -26,5 +26,6 @@ public class Managers : MonoBehaviour
 
 
         audioManager = GetComponent<AudioManager>();
+        audioManager.Init();
     }
 }

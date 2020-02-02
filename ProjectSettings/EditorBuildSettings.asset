@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 8121dbf95d9e41d4daa48607d55c3a05
+  - enabled: 1
+    path: Assets/Scenes/TreeWinScene.unity
+    guid: 077d92cbdfab06c4897560f5cf2752c6
+  - enabled: 1
+    path: Assets/Scenes/BirdWinScene.unity
+    guid: 9585dd4df27a5d8418c3612214d1c0ce
   m_configObjects: {}

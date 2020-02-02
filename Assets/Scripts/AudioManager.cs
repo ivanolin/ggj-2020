@@ -24,7 +24,8 @@ public class AudioManager : MonoBehaviour
 
     bool inited;
 
-    private void Init() {
+    public void Init() {
+        if (inited) return;
         inited = true;
 
         if (openingSong != null && mainSong != null) {
@@ -32,7 +33,7 @@ public class AudioManager : MonoBehaviour
             mainSong.Init();
 
             currentSong = openingSong;
-            currentSong.TurnOn(0.1f);
+            currentSong.TurnOn(0f, 0.1f);
         }
     }
 
@@ -40,9 +41,6 @@ public class AudioManager : MonoBehaviour
 
 
     void Update() {
-        if (!inited)
-            Init();
-
         if (openingSong != null && mainSong != null) {
             // move current intensity towards desired intensity
             if (Mathf.Abs(desiredIntensity - currentIntensity) < intensityFadeSpeed * Time.deltaTime) {
@@ -85,31 +83,48 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    public void SwitchSong(SongController newSong, float fadeOutTime, float turnOnDelay) {
+    public void SwitchSong(SongController newSong, float fadeOutTime, float fadeInTime = 0f, float fadeInDelay = 0f) {
         currentSong.TurnOff(fadeOutTime);
         currentSong = newSong;
-        currentSong.TurnOn(turnOnDelay);
+        currentSong.TurnOn(fadeInTime, fadeInDelay);
     }
 
 
     public void SwitchSongToOther() {
         if (currentSong == openingSong) {
-            SwitchToMain();
+            SwitchToMain(false);
         } else {
             SwitchToOpening();
         }
     }
 
-    public void SwitchToMain() {
+    public void SwitchToMain(bool switchImmediately) {
         if (currentSong == mainSong) return;
 
-        SwitchSong(mainSong, 1f, 1.4f);
-        mainSong.PlayTransitionSound();
+        desiredIntensity = 0;
+        
+        if (switchImmediately) {
+            SwitchSong(mainSong, 0f);
+        } else {
+            SwitchSong(mainSong, 1f, 0f, 1.4f);
+            openingSong.PlayTransitionSound();
+        }
     }
 
     public void SwitchToOpening() {
         if (currentSong == openingSong) return;
 
-        SwitchSong(openingSong, 0f, 2f);
+        SwitchSong(openingSong, 0f, 1f);
+    }
+
+    public void EndMain(bool endImmediately) {
+        if (currentSong != mainSong) return;
+
+        if (endImmediately) {
+            currentSong.TurnOff(0f);
+        } else {
+            currentSong.TurnOff(1f);
+        }
+        mainSong.PlayTransitionSound();
     }
 }
