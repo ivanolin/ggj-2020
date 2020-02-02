@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -12338,7 +12338,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649290546}
-  m_LocalRotation: {x: 0.0000073688416, y: -0.9158264, z: 0.4015745, w: 0.0000032175797}
+  m_LocalRotation: {x: 0.000007369867, y: -0.9158264, z: 0.4015745, w: 0.0000032188218}
   m_LocalPosition: {x: -12.5, y: 82.86, z: 49.11565}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -17320,6 +17320,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bird Player
       objectReference: {fileID: 0}
+    - target: {fileID: 34562731558769717, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 34562731558769719, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
         type: 3}
       propertyPath: numberOfProjectiles
@@ -21440,7 +21445,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147259654}
-  m_LocalRotation: {x: 0.0000073688416, y: -0.9158264, z: 0.4015745, w: 0.0000032175797}
+  m_LocalRotation: {x: 0.000007369867, y: -0.9158264, z: 0.4015745, w: 0.0000032188218}
   m_LocalPosition: {x: -12.5, y: 82.86, z: 49.11565}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -41997,6 +42002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3216727380786771822, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3216727380786771823, guid: 0ee56a91b53304e599272c7a6e3ab896,
         type: 3}
