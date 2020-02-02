@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovementController : MonoBehaviour
 {
 
+    public Animator animator;
     public string HorizontalAxis;
     public string VerticalAxis;
 
@@ -28,13 +29,14 @@ public class PlayerMovementController : MonoBehaviour
     void Start() {
         characterController = GetComponent<CharacterController>();
         Speed = maxSpeed;
-
+        animator = GetComponentInChildren<Animator>();
         StartCoroutine(PlayFootstepSounds());
     }
 
     void Update()
     {
         Move();
+        SetAnimationState();
     }
 
     private void Move()
@@ -63,5 +65,49 @@ public class PlayerMovementController : MonoBehaviour
 
             yield return new WaitForSeconds(footstepSoundSpeed);
         }
+    }
+
+    void SetAnimationState()
+    {
+        animator.SetInteger("Direction", GetIntDirection());
+        Debug.Log(GetComponent<Rigidbody>().velocity.magnitude);
+        animator.SetFloat("Speed", characterController.velocity.magnitude);
+    }
+
+    int GetIntDirection()
+    {
+        float directionDistance = float.MaxValue;
+        float testDistance = 0;
+        int direction = 0;
+
+        testDistance = Vector3.Distance(Vector3.back, LastDirection);
+        if(testDistance < directionDistance)
+        {
+            directionDistance = testDistance;
+            direction = 0;
+        }
+
+        testDistance = Vector3.Distance(Vector3.forward, LastDirection);
+        if(testDistance < directionDistance)
+        {
+            directionDistance = testDistance;
+            direction = 1;
+        }
+
+        testDistance = Vector3.Distance(Vector3.right, LastDirection);
+        if(testDistance < directionDistance)
+        {
+            directionDistance = testDistance;
+            direction = 3;
+        }
+
+        testDistance = Vector3.Distance(Vector3.left, LastDirection);
+        if(testDistance < directionDistance)
+        {
+            directionDistance = testDistance;
+            direction = 2;
+        }
+
+        return direction;
     }
 }
