@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1075,7 +1075,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42243271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.5, y: 1, z: -20.88435}
+  m_LocalPosition: {x: -12.5, y: 6.86, z: -20.88435}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12338,8 +12338,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649290546}
-  m_LocalRotation: {x: 0.0000073692795, y: -0.9158264, z: 0.40157455, w: 0.0000032185774}
-  m_LocalPosition: {x: -12.5, y: 77, z: 49.11565}
+  m_LocalRotation: {x: 0.0000073688416, y: -0.9158264, z: 0.4015745, w: 0.0000032175797}
+  m_LocalPosition: {x: -12.5, y: 82.86, z: 49.11565}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17395,6 +17395,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 34562731558769722, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.94
+      objectReference: {fileID: 0}
     - target: {fileID: 174596760486197997, guid: 1368b5c7f9e5c42c8a1f0c0f5b7c376c,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -21435,8 +21440,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147259654}
-  m_LocalRotation: {x: 0.0000073692795, y: -0.9158264, z: 0.40157455, w: 0.0000032185774}
-  m_LocalPosition: {x: -12.5, y: 77, z: 49.11565}
+  m_LocalRotation: {x: 0.0000073688416, y: -0.9158264, z: 0.4015745, w: 0.0000032175797}
+  m_LocalPosition: {x: -12.5, y: 82.86, z: 49.11565}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1697211051}
@@ -41933,6 +41938,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 3216727380786771809, guid: 0ee56a91b53304e599272c7a6e3ab896,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.78
+      objectReference: {fileID: 0}
     - target: {fileID: 3216727380786771810, guid: 0ee56a91b53304e599272c7a6e3ab896,
         type: 3}
       propertyPath: footstepSounds.Array.size
@@ -41991,12 +42001,12 @@ PrefabInstance:
     - target: {fileID: 3216727380786771823, guid: 0ee56a91b53304e599272c7a6e3ab896,
         type: 3}
       propertyPath: maxHealth
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3216727380786771823, guid: 0ee56a91b53304e599272c7a6e3ab896,
         type: 3}
       propertyPath: health
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5017645908848101475, guid: 0ee56a91b53304e599272c7a6e3ab896,
         type: 3}
