@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -344,11 +344,12 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 6630399095673471823, guid: 3d52595487b3be244a21fbc9da268c58,
+    m_HighlightedSprite: {fileID: -5488762818878329118, guid: 3d52595487b3be244a21fbc9da268c58,
       type: 3}
     m_PressedSprite: {fileID: -5488762818878329118, guid: 3d52595487b3be244a21fbc9da268c58,
       type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -5488762818878329118, guid: 3d52595487b3be244a21fbc9da268c58,
+      type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -742,11 +743,12 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 6630399095673471823, guid: 3d52595487b3be244a21fbc9da268c58,
+    m_HighlightedSprite: {fileID: -5488762818878329118, guid: 3d52595487b3be244a21fbc9da268c58,
       type: 3}
     m_PressedSprite: {fileID: -5488762818878329118, guid: 3d52595487b3be244a21fbc9da268c58,
       type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -5488762818878329118, guid: 3d52595487b3be244a21fbc9da268c58,
+      type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1692,7 +1694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 767758259}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1411151446
@@ -1895,11 +1897,12 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 6630399095673471823, guid: 3d52595487b3be244a21fbc9da268c58,
+    m_HighlightedSprite: {fileID: -5488762818878329118, guid: 3d52595487b3be244a21fbc9da268c58,
       type: 3}
     m_PressedSprite: {fileID: -5488762818878329118, guid: 3d52595487b3be244a21fbc9da268c58,
       type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -5488762818878329118, guid: 3d52595487b3be244a21fbc9da268c58,
+      type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal

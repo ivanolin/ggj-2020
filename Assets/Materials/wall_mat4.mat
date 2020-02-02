@@ -97,7 +97,7 @@ Material:
     m_Colors:
     - Color_6A162E48: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 0}
     - Color_6C9C775A: {r: 1, g: 1, b: 1, a: 0}
-    - Color_9A9462B: {r: 0, g: 0, b: 0, a: 0}
+    - Color_9A9462B: {r: 0.08021983, g: 0.2086369, b: 0.42869055, a: 0}
     - Color_D2A04608: {r: 1, g: 1, b: 1, a: 0}
     - Color_D840FCE7: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
