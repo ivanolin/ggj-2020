@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthController : MonoBehaviour
 {
     private Animator animator;
-    public int health = 3;
+    public int health;
     public int maxHealth;
     private float newSpeed;
     private float minSpeed;
