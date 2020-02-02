@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6440802685809141771}
   m_Layer: 8
   m_Name: Wood Projectile
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,6 +130,7 @@ MonoBehaviour:
   canHeal: 0
   canPickUp: 0
   hitSound: {fileID: 8300000, guid: fc8037ab78058f44abd612803bab3178, type: 3}
+  throwAudio: {fileID: 0}
   fastSpeed: 50
 --- !u!82 &6440802685809141771
 AudioSource:
@@ -287,4 +288,5 @@ MonoBehaviour:
   canHeal: 0
   canPickUp: 0
   hitSound: {fileID: 0}
+  throwAudio: {fileID: 0}
   fastSpeed: 0
