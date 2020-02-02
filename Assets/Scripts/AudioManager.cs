@@ -22,18 +22,26 @@ public class AudioManager : MonoBehaviour
     public SongController currentSong;
 
 
-    private void Start() {
+    bool inited;
+
+    private void Init() {
+        inited = true;
+
         if (openingSong != null && mainSong != null) {
             openingSong.Init();
             mainSong.Init();
 
-            currentSong = mainSong;
+            currentSong = openingSong;
             currentSong.TurnOn();
         }
     }
 
 
+
+
     void Update() {
+        if (!inited)
+            Init();
 
         if (openingSong != null && mainSong != null) {
             // move current intensity towards desired intensity
@@ -75,9 +83,21 @@ public class AudioManager : MonoBehaviour
 
     public void SwitchSongToOther() {
         if (currentSong == openingSong) {
-            SwitchSong(mainSong, 2f);
+            SwitchToMain();
         } else {
-            SwitchSong(openingSong, 1f);
+            SwitchToOpening();
         }
+    }
+
+    public void SwitchToMain() {
+        if (currentSong == mainSong) return;
+
+        SwitchSong(mainSong, 2f);
+    }
+
+    public void SwitchToOpening() {
+        if (currentSong == openingSong) return;
+
+        SwitchSong(openingSong, 1f);
     }
 }
