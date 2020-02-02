@@ -84,28 +84,32 @@ public class PlayerMovementController : MonoBehaviour
         if(testDistance < directionDistance)
         {
             directionDistance = testDistance;
-            direction = 0;
+            direction = 1;
         }
 
         testDistance = Vector3.Distance(Vector3.forward, LastDirection);
         if(testDistance < directionDistance)
         {
             directionDistance = testDistance;
-            direction = 1;
+            direction = 0;
         }
 
         testDistance = Vector3.Distance(Vector3.right, LastDirection);
         if(testDistance < directionDistance)
         {
-            directionDistance = testDistance;
             direction = 3;
         }
 
         testDistance = Vector3.Distance(Vector3.left, LastDirection);
         if(testDistance < directionDistance)
         {
+            animator.gameObject.GetComponent<SpriteRenderer>().flipX = true;
             directionDistance = testDistance;
             direction = 2;
+        }
+        else
+        {
+            animator.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
 
         return direction;
