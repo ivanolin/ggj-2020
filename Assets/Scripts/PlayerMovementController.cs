@@ -15,11 +15,21 @@ public class PlayerMovementController : MonoBehaviour
 
     private CharacterController characterController;
 
+
+    public AudioClip[] footstepSounds;
+    public float footstepSoundSpeed;
+    public float footstepVolume;
+
+    bool isMoving;
+
+
     // Update is called once per frame
 
     void Start() {
         characterController = GetComponent<CharacterController>();
         Speed = maxSpeed;
+
+        StartCoroutine(PlayFootstepSounds());
     }
 
     void Update()
@@ -32,8 +42,10 @@ public class PlayerMovementController : MonoBehaviour
 
         var moveDirection = new Vector3(-Input.GetAxis(HorizontalAxis), 0.0f, -Input.GetAxis(VerticalAxis));
 
-        if(moveDirection.magnitude > 0)
+        isMoving = moveDirection.magnitude > 0.2f;
+        if (isMoving) {
             LastDirection = moveDirection;
+        }
 
         if(!characterController.isGrounded)
             moveDirection += new Vector3(0,-1,0);
@@ -41,5 +53,15 @@ public class PlayerMovementController : MonoBehaviour
         moveDirection *= Speed;
 
         GetComponent<CharacterController>().Move(moveDirection * Time.deltaTime);
+    }
+
+    IEnumerator PlayFootstepSounds() {
+        while (true) {
+            if (isMoving) {
+                Managers.AudioManager?.PlaySoundEffect(footstepSounds[Random.Range(0, footstepSounds.Length)], footstepVolume);
+            }
+
+            yield return new WaitForSeconds(footstepSoundSpeed);
+        }
     }
 }

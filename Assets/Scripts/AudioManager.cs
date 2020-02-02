@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
     public float intensityFadeSpeed;
 
 
-    AudioSource sfxAudio;
+    public AudioSource sfxAudio;
 
 
     public SongController openingSong;
@@ -22,20 +22,26 @@ public class AudioManager : MonoBehaviour
     public SongController currentSong;
 
 
-    private void Start() {
-        sfxAudio = GetComponent<AudioSource>();
+    bool inited;
+
+    private void Init() {
+        inited = true;
 
         if (openingSong != null && mainSong != null) {
             openingSong.Init();
             mainSong.Init();
 
             currentSong = openingSong;
-            currentSong.TurnOn();
+            currentSong.TurnOn(0f);
         }
     }
 
 
+
+
     void Update() {
+        if (!inited)
+            Init();
 
         if (openingSong != null && mainSong != null) {
             // move current intensity towards desired intensity
@@ -54,28 +60,49 @@ public class AudioManager : MonoBehaviour
     }
 
     public void ChangeIntensity(float intensity) {
-        desiredIntensity = currentIntensity;
+        desiredIntensity = intensity;
     }
 
     
 
     public void PlaySoundEffect(AudioClip sound) {
-        sfxAudio.PlayOneShot(sound);
+        PlaySoundEffect(sound, 1);
+    }
+
+    public void PlaySoundEffect(AudioClip sound, float volume) {
+        if (sound == null) {
+            Debug.LogWarning("This AudioClip does not exist!");
+            return;
+        }
+        
+        sfxAudio.PlayOneShot(sound, volume);
     }
 
 
-    public void SwitchSong(SongController newSong, float fadeOutTime) {
+    public void SwitchSong(SongController newSong, float fadeOutTime, float turnOnDelay) {
         currentSong.TurnOff(fadeOutTime);
         currentSong = newSong;
-        currentSong.TurnOn();
+        currentSong.TurnOn(turnOnDelay);
     }
 
 
     public void SwitchSongToOther() {
         if (currentSong == openingSong) {
-            SwitchSong(mainSong, 2f);
+            SwitchToMain();
         } else {
-            SwitchSong(openingSong, 1f);
+            SwitchToOpening();
         }
+    }
+
+    public void SwitchToMain() {
+        if (currentSong == mainSong) return;
+
+        SwitchSong(mainSong, 1.5f, 1f);
+    }
+
+    public void SwitchToOpening() {
+        if (currentSong == openingSong) return;
+
+        SwitchSong(openingSong, 0f, 2f);
     }
 }

@@ -27,7 +27,6 @@ public class SongController : MonoBehaviour
                 if (Mathf.Abs(i - intensity) >= 1) {
                     audioSource.volume = 0;
                 } else {
-                    Debug.Log(audioSource.clip + " " + currentMaxVolume);
                     audioSource.volume = currentMaxVolume * (1 - (i - intensity) * (i - intensity));
                 }
 
@@ -42,11 +41,16 @@ public class SongController : MonoBehaviour
         StartCoroutine(FadeOut(time));
     }
 
-    public void TurnOn() {
+    public void TurnOn(float turnOnDelay) {
+        StartCoroutine(TurnOnWithDelay(turnOnDelay));
+    }
+
+    IEnumerator TurnOnWithDelay(float turnOnDelay) {
+        yield return new WaitForSeconds(turnOnDelay);
+        
         currentMaxVolume = maxVolume;
         audioSources.ForEach(audioSource => audioSource.Play());
     }
-
 
     IEnumerator FadeOut(float time) {
         float timer = time;

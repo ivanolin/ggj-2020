@@ -4,33 +4,43 @@ using UnityEngine;
 
 public class Hop : MonoBehaviour
 {
-    public string HorizontalAxis;
-    public string VerticalAxis;
-    public int HopFactor = 1000;
+    public bool jumpVaild;
+    private float timer = 0f;
+
+    private GameObject interactable;
     
-    Rigidbody Rigidbody;
-    Vector3 LastDirection;
     // Start is called before the first frame update
-    void Start()
-    {
-        Rigidbody = GetComponent<Rigidbody>();
-    }
+    void Start() { }
 
     // Update is called once per frame
     void Update()
     {
-        var moveDirection = new Vector3(-Input.GetAxis(HorizontalAxis), 0.0f, -Input.GetAxis(VerticalAxis));
-
-        if (moveDirection.magnitude > 0)
-            LastDirection = moveDirection;
-
-        if (Input.GetKeyDown(KeyCode.Z))
+        if(timer > 0f)
         {
-            bool hit = Physics.Raycast(transform.position, LastDirection, 1.0f, LayerMask.GetMask("Interactable Objects"));
-            if (hit)
-            {
-                Rigidbody.AddForce((LastDirection + new Vector3(0, 5, 0)) * HopFactor);
-            }
+            timer -= Time.deltaTime;
+        }
+        else
+        {
+            jumpVaild = false;
+            if(interactable != null)
+                interactable.GetComponent<BoxCollider>().enabled = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z) && jumpVaild)
+        {
+            Debug.Log(interactable.GetComponentInChildren<BoxCollider>().gameObject.name);
+            interactable.GetComponent<BoxCollider>().enabled = false;
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Jump")
+        {
+            Debug.Log("JUMP");
+            jumpVaild = true;
+            timer = 1.5f;
+            interactable = other.gameObject;
         }
     }
 }
