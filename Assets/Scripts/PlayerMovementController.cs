@@ -22,6 +22,7 @@ public class PlayerMovementController : MonoBehaviour
     public float footstepVolume;
 
     bool isMoving;
+    public bool canStop = true;
 
 
     // Update is called once per frame
@@ -31,6 +32,9 @@ public class PlayerMovementController : MonoBehaviour
         Speed = maxSpeed;
         animator = GetComponentInChildren<Animator>();
         StartCoroutine(PlayFootstepSounds());
+
+        if(!canStop)
+            LastDirection = Vector3.forward;
     }
 
     void Update()
@@ -39,6 +43,8 @@ public class PlayerMovementController : MonoBehaviour
         SetAnimationState();
     }
 
+
+
     private void Move()
     {
 
@@ -46,7 +52,12 @@ public class PlayerMovementController : MonoBehaviour
 
         isMoving = moveDirection.magnitude > 0.2f;
         if (isMoving) {
+            moveDirection = moveDirection.normalized;
             LastDirection = moveDirection;
+        }
+        if(!isMoving && !canStop)
+        {
+            moveDirection = LastDirection;
         }
 
         if(!characterController.isGrounded)
@@ -55,6 +66,7 @@ public class PlayerMovementController : MonoBehaviour
         moveDirection *= Speed;
 
         GetComponent<CharacterController>().Move(moveDirection * Time.deltaTime);
+            
     }
 
     IEnumerator PlayFootstepSounds() {
