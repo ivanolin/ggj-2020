@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
+    private Animator animator;
     public int health = 3;
     public int maxHealth;
     private float newSpeed;
@@ -17,6 +18,9 @@ public class HealthController : MonoBehaviour
 
     public AudioClip[] damageSounds;
     public AudioClip deathSound;
+    public AudioClip[] healSounds;
+
+    public bool hasTriggeredEnd;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +29,7 @@ public class HealthController : MonoBehaviour
         movementController = GetComponent<PlayerMovementController>();
         health /= 2;
         SetHealthBar();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void SetHealthBar()
@@ -32,12 +37,17 @@ public class HealthController : MonoBehaviour
         HealthBar.fillAmount = (float)health / (float)maxHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(health <= 0)
+        if(!hasTriggeredEnd && health <= 0)
         {
+            hasTriggeredEnd = true;
+
             //TRIGGER POOF ANIMATION
+
+
+            Managers.AudioManager?.EndMain(true);
+            Managers.Instance.LoadSceneWithDelay(2, 0f); // add delay here to view poof animation and then move on
         }
     }
 
@@ -75,6 +85,23 @@ public class HealthController : MonoBehaviour
         // a different sound will play if the player has actually died
         if (health > 0) {
             Managers.AudioManager.PlayRandomSoundEffect(damageSounds, 0.95f, 0.05f);
+
+            if (health >= maxHealth * (2 / 3))
+            {
+                animator.SetBool("IsHurt1", false);
+                animator.SetBool("IsHurt2", false);
+            }
+            else if (health >= maxHealth / 3 && health < maxHealth * (2 / 3))
+            {
+                animator.SetBool("IsHurt1", true);
+                animator.SetBool("IsHurt2", false);
+            }
+            else
+            {
+                animator.SetBool("IsHurt1", false);
+                animator.SetBool("IsHurt2", true);
+            }
+
         } else {
             Managers.AudioManager.PlaySoundEffect(deathSound);
         }
@@ -91,5 +118,7 @@ public class HealthController : MonoBehaviour
         newSpeed = Vector3.Lerp(new Vector3(minSpeed, 0, 0), new Vector3(maxSpeed, 0, 0), (float)health / maxHealth).x;
         movementController.Speed = newSpeed;
         SetHealthBar();
+
+        Managers.AudioManager?.PlayRandomSoundEffect(healSounds, 0.95f, 0.05f);
     }
 }

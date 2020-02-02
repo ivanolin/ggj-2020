@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c5903328b9cbf44829596f64c599fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionSound: {fileID: 8300000, guid: 7282cc2c7ee46c34c9e7c3d2330d1f73, type: 3}
+  transitionSound: {fileID: 8300000, guid: 0b39f611cbdedd341b5b5adfc061fc8d, type: 3}
   transitionSource: {fileID: 8118314261815976977}
 --- !u!82 &7933978834291250595
 AudioSource:
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c5903328b9cbf44829596f64c599fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionSound: {fileID: 0}
+  transitionSound: {fileID: 8300000, guid: 7282cc2c7ee46c34c9e7c3d2330d1f73, type: 3}
   transitionSource: {fileID: 8118314261815976977}
 --- !u!1 &8703871267199939030
 GameObject:
