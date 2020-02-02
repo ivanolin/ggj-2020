@@ -18,6 +18,7 @@ public class StartMenu : MonoBehaviour
 
     public void Play()
     {
+        Managers.AudioManager?.SwitchToMain();
         SceneManager.LoadScene(1);
     }
 
