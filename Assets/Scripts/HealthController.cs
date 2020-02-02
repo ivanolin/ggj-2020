@@ -15,7 +15,7 @@ public class HealthController : MonoBehaviour
     public GameObject woodPiece;
     public PlayerMovementController movementController;
 
-    public AudioClip damageSound;
+    public AudioClip[] damageSounds;
     public AudioClip deathSound;
 
     // Start is called before the first frame update
@@ -74,7 +74,7 @@ public class HealthController : MonoBehaviour
 
         // a different sound will play if the player has actually died
         if (health > 0) {
-            Managers.AudioManager.PlaySoundEffect(damageSound);
+            Managers.AudioManager.PlayRandomSoundEffect(damageSounds, 0.95f, 0.05f);
         } else {
             Managers.AudioManager.PlaySoundEffect(deathSound);
         }
