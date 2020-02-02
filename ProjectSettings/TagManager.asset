@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wood
   - Hazard
+  - Jump
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Bird
   - TreeMan
   - ItemLayer
-  - 
+  - InteractableObjects
   - 
   - 
   - 
