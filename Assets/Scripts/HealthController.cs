@@ -56,8 +56,6 @@ public class HealthController : MonoBehaviour
     {
         Debug.Log("TOOK DAMAGE");
 
-        Managers.AudioManager.PlaySoundEffect(damageSound);
-
         health--;
         maxSpeed = movementController.maxSpeed;
         minSpeed = movementController.minSpeed;
@@ -68,6 +66,14 @@ public class HealthController : MonoBehaviour
             health = 0;
         }
         SetHealthBar();
+
+        // a different sound will play if the player has actually died
+        if (health > 0) {
+            Managers.AudioManager.PlaySoundEffect(damageSound);
+        }
+
+        // use the current health to set the intensity of the background music
+        Managers.AudioManager?.ChangeIntensity(health <= 3 ? 2 : 1);
     }
 
     public void Heal()

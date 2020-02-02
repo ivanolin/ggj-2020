@@ -52,7 +52,7 @@ public class AudioManager : MonoBehaviour
     }
 
     public void ChangeIntensity(float intensity) {
-        desiredIntensity = currentIntensity;
+        desiredIntensity = intensity;
     }
 
     
