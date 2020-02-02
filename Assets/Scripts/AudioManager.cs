@@ -66,10 +66,15 @@ public class AudioManager : MonoBehaviour
     
 
     public void PlaySoundEffect(AudioClip sound) {
-        sfxAudio.PlayOneShot(sound);
+        PlaySoundEffect(sound, 1);
     }
 
     public void PlaySoundEffect(AudioClip sound, float volume) {
+        if (sound == null) {
+            Debug.LogWarning("This AudioClip does not exist!");
+            return;
+        }
+        
         sfxAudio.PlayOneShot(sound, volume);
     }
 

@@ -16,6 +16,7 @@ public class HealthController : MonoBehaviour
     public PlayerMovementController movementController;
 
     public AudioClip damageSound;
+    public AudioClip deathSound;
 
     // Start is called before the first frame update
     void Start()
@@ -70,6 +71,8 @@ public class HealthController : MonoBehaviour
         // a different sound will play if the player has actually died
         if (health > 0) {
             Managers.AudioManager.PlaySoundEffect(damageSound);
+        } else {
+            Managers.AudioManager.PlaySoundEffect(deathSound);
         }
 
         // use the current health to set the intensity of the background music
