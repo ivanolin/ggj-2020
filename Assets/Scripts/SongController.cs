@@ -44,8 +44,8 @@ public class SongController : MonoBehaviour
         StartCoroutine(FadeOut(time));
     }
 
-    public void TurnOn(float turnOnDelay) {
-        StartCoroutine(TurnOnWithDelay(turnOnDelay));
+    public void TurnOn(float fadeInTime, float turnOnDelay) {
+        StartCoroutine(FadeInWithDelay(fadeInTime, turnOnDelay));
     }
 
 
@@ -53,11 +53,19 @@ public class SongController : MonoBehaviour
         transitionSource.PlayOneShot(transitionSound);
     }
 
-    IEnumerator TurnOnWithDelay(float turnOnDelay) {
+    IEnumerator FadeInWithDelay(float fadeInTime, float turnOnDelay) {
         yield return new WaitForSeconds(turnOnDelay);
         
-        currentMaxVolume = maxVolume;
+        float timer = fadeInTime;
         audioSources.ForEach(audioSource => audioSource.Play());
+
+        while (timer > 0) {
+            currentMaxVolume = maxVolume * (1 - timer / timer);
+            yield return 0;
+            timer -= Time.deltaTime;
+        }
+
+        currentMaxVolume = maxVolume;
     }
 
     IEnumerator FadeOut(float time) {
