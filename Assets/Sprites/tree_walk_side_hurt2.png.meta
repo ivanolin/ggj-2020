@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 1069501029477381415
-    second: sideHurtHurt_0
+    second: tree_walk_side_hurt2_0
   - first:
       213: -3476625262788443269
-    second: sideHurtHurt_1
+    second: tree_walk_side_hurt2_1
   - first:
       213: 5167920603354908665
     second: sideHurtHurt_2
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sideHurtHurt_0
+      name: tree_walk_side_hurt2_0
       rect:
         serializedVersion: 2
         x: 182
@@ -136,7 +136,7 @@ TextureImporter:
         width: 394
         height: 788
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sideHurtHurt_1
+      name: tree_walk_side_hurt2_1
       rect:
         serializedVersion: 2
         x: 581
@@ -157,7 +157,7 @@ TextureImporter:
         width: 428
         height: 784
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

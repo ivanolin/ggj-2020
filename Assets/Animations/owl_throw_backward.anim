@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: tree_sidestep
+  m_Name: owl_throw_backward
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,10 +20,10 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -8176049239398014628, guid: d77da3fa3ccab483ca05d24c7ab5b070,
+      value: {fileID: -7618742181893855313, guid: 304872a7dbb1c864a89e0422062a7a7f,
         type: 3}
     - time: 0.083333336
-      value: {fileID: -4575692791458369205, guid: d77da3fa3ccab483ca05d24c7ab5b070,
+      value: {fileID: 1561809836681507167, guid: 304872a7dbb1c864a89e0422062a7a7f,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -44,8 +44,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -8176049239398014628, guid: d77da3fa3ccab483ca05d24c7ab5b070, type: 3}
-    - {fileID: -4575692791458369205, guid: d77da3fa3ccab483ca05d24c7ab5b070, type: 3}
+    - {fileID: -7618742181893855313, guid: 304872a7dbb1c864a89e0422062a7a7f, type: 3}
+    - {fileID: 1561809836681507167, guid: 304872a7dbb1c864a89e0422062a7a7f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

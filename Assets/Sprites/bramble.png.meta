@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -3620862162168837853
-    second: bramble_spritesheet_0
+    second: bramble_0
   - first:
       213: -3238284938151896252
-    second: bramble_spritesheet_1
+    second: bramble_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -92,7 +92,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bramble_spritesheet_0
+      name: bramble_0
       rect:
         serializedVersion: 2
         x: 0
@@ -100,7 +100,7 @@ TextureImporter:
         width: 278
         height: 283
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -113,7 +113,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bramble_spritesheet_1
+      name: bramble_1
       rect:
         serializedVersion: 2
         x: 277
@@ -121,7 +121,7 @@ TextureImporter:
         width: 277.5
         height: 283
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

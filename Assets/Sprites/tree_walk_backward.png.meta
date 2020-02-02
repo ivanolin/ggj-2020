@@ -4,13 +4,13 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -1474041803219992219
-    second: backstepFixed_0
+    second: tree_walk_backward_0
   - first:
       213: -1572211470722525917
-    second: backstepFixed_0
+    second: tree_walk_backward_0
   - first:
       213: 8854503317194983422
-    second: backstepFixed_1
+    second: tree_walk_backward_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: backstepFixed_0
+      name: tree_walk_backward_0
       rect:
         serializedVersion: 2
         x: 10
@@ -115,7 +115,7 @@ TextureImporter:
         width: 558
         height: 909
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -128,7 +128,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: backstepFixed_1
+      name: tree_walk_backward_1
       rect:
         serializedVersion: 2
         x: 571
@@ -136,7 +136,7 @@ TextureImporter:
         width: 557
         height: 909
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

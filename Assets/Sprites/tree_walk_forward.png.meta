@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8671599445474146178
-    second: frontstepfixed_0
+    second: tree_walk_forward_0
   - first:
       213: 4227636006601839881
-    second: frontstepfixed_1
+    second: tree_walk_forward_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: frontstepfixed_0
+      name: tree_walk_forward_0
       rect:
         serializedVersion: 2
         x: 1
@@ -112,7 +112,7 @@ TextureImporter:
         width: 564
         height: 909
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -125,7 +125,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frontstepfixed_1
+      name: tree_walk_forward_1
       rect:
         serializedVersion: 2
         x: 577
@@ -133,7 +133,7 @@ TextureImporter:
         width: 558
         height: 909
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

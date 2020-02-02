@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8820805336426593821
-    second: owl side throw sprite_0
+    second: owl_throw_side_0
   - first:
       213: -2367754766839294596
-    second: owl side throw sprite_1
+    second: owl_throw_side_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: owl side throw sprite_0
+      name: owl_throw_side_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,7 +112,7 @@ TextureImporter:
         width: 385
         height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -125,7 +125,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: owl side throw sprite_1
+      name: owl_throw_side_1
       rect:
         serializedVersion: 2
         x: 411
@@ -133,7 +133,7 @@ TextureImporter:
         width: 381
         height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

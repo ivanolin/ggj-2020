@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8688520165960579618
-    second: backStepHurtHurt_0
+    second: tree_walk_backward_hurt2_0
   - first:
       213: -2612299678460139356
-    second: backStepHurtHurt_1
+    second: tree_walk_backward_hurt2_1
   - first:
       213: 2927568239369513933
     second: backStepHurtHurt_2
@@ -134,7 +134,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: backStepHurtHurt_0
+      name: tree_walk_backward_hurt2_0
       rect:
         serializedVersion: 2
         x: 1
@@ -142,7 +142,7 @@ TextureImporter:
         width: 370
         height: 775
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,7 +155,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: backStepHurtHurt_1
+      name: tree_walk_backward_hurt2_1
       rect:
         serializedVersion: 2
         x: 389
@@ -163,7 +163,7 @@ TextureImporter:
         width: 424
         height: 765
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
