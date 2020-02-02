@@ -61,6 +61,7 @@ public class HealthController : MonoBehaviour
         {
             TakeDamage();
             other.enabled = false;
+            GameObject.Destroy(other.gameObject);
             Instantiate(woodPiece, transform.position, transform.rotation).GetComponentInChildren<Projectile>().DamageDrop();
         }
 
