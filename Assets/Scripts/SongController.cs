@@ -41,11 +41,16 @@ public class SongController : MonoBehaviour
         StartCoroutine(FadeOut(time));
     }
 
-    public void TurnOn() {
+    public void TurnOn(float turnOnDelay) {
+        StartCoroutine(TurnOnWithDelay(turnOnDelay));
+    }
+
+    IEnumerator TurnOnWithDelay(float turnOnDelay) {
+        yield return new WaitForSeconds(turnOnDelay);
+        
         currentMaxVolume = maxVolume;
         audioSources.ForEach(audioSource => audioSource.Play());
     }
-
 
     IEnumerator FadeOut(float time) {
         float timer = time;

@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
             mainSong.Init();
 
             currentSong = openingSong;
-            currentSong.TurnOn();
+            currentSong.TurnOn(0f);
         }
     }
 
@@ -74,10 +74,10 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    public void SwitchSong(SongController newSong, float fadeOutTime) {
+    public void SwitchSong(SongController newSong, float fadeOutTime, float turnOnDelay) {
         currentSong.TurnOff(fadeOutTime);
         currentSong = newSong;
-        currentSong.TurnOn();
+        currentSong.TurnOn(turnOnDelay);
     }
 
 
@@ -92,12 +92,12 @@ public class AudioManager : MonoBehaviour
     public void SwitchToMain() {
         if (currentSong == mainSong) return;
 
-        SwitchSong(mainSong, 2f);
+        SwitchSong(mainSong, 1.5f, 1f);
     }
 
     public void SwitchToOpening() {
         if (currentSong == openingSong) return;
 
-        SwitchSong(openingSong, 1f);
+        SwitchSong(openingSong, 0f, 2f);
     }
 }

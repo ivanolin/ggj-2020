@@ -22,7 +22,7 @@ public class StartMenu : MonoBehaviour
     {
         Managers.AudioManager?.SwitchToMain();
         screenWipe.WipeScreen();
-        StartCoroutine(LoadSceneWithDelay(1, screenWipe.wipeTime));
+        StartCoroutine(LoadSceneWithDelay(1, screenWipe.wipeTime + 0.5f));
     }
 
     public void ToggleCredits()
