@@ -35,7 +35,10 @@ public class HealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(health <= 0)
+        {
+            //TRIGGER POOF ANIMATION
+        }
     }
 
     public void OnTriggerEnter(Collider other)
