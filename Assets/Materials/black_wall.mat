@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: white_wall
+  m_Name: black_wall
   m_Shader: {fileID: -6465566751694194690, guid: 95d484ca0ad9e1d4891ed6475559e5db,
     type: 3}
   m_ShaderKeywords: 
