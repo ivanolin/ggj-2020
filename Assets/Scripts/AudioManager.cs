@@ -24,7 +24,8 @@ public class AudioManager : MonoBehaviour
 
     bool inited;
 
-    private void Init() {
+    public void Init() {
+        if (inited) return;
         inited = true;
 
         if (openingSong != null && mainSong != null) {
@@ -40,9 +41,6 @@ public class AudioManager : MonoBehaviour
 
 
     void Update() {
-        if (!inited)
-            Init();
-
         if (openingSong != null && mainSong != null) {
             // move current intensity towards desired intensity
             if (Mathf.Abs(desiredIntensity - currentIntensity) < intensityFadeSpeed * Time.deltaTime) {
@@ -94,18 +92,23 @@ public class AudioManager : MonoBehaviour
 
     public void SwitchSongToOther() {
         if (currentSong == openingSong) {
-            SwitchToMain();
+            SwitchToMain(false);
         } else {
             SwitchToOpening();
         }
     }
 
-    public void SwitchToMain() {
+    public void SwitchToMain(bool switchImmediately) {
         if (currentSong == mainSong) return;
 
         desiredIntensity = 0;
-        SwitchSong(mainSong, 1f, 0f, 1.4f);
-        openingSong.PlayTransitionSound();
+        
+        if (switchImmediately) {
+            SwitchSong(mainSong, 0f);
+        } else {
+            SwitchSong(mainSong, 1f, 0f, 1.4f);
+            openingSong.PlayTransitionSound();
+        }
     }
 
     public void SwitchToOpening() {
@@ -117,7 +120,11 @@ public class AudioManager : MonoBehaviour
     public void EndMain(bool endImmediately) {
         if (currentSong != mainSong) return;
 
-        desiredIntensity = endImmediately ? 50 : 5;
+        if (endImmediately) {
+            currentSong.TurnOff(0f);
+        } else {
+            currentSong.TurnOff(1f);
+        }
         mainSong.PlayTransitionSound();
     }
 }

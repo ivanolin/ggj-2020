@@ -15,6 +15,8 @@ public class SongController : MonoBehaviour
     public AudioClip transitionSound;
     public AudioSource transitionSource;
 
+    Coroutine currentFadeRoutine;
+
 
     public void Init() {
         currentMaxVolume = 0;
@@ -41,11 +43,19 @@ public class SongController : MonoBehaviour
     }
 
     public void TurnOff(float time) {
-        StartCoroutine(FadeOut(time));
+        if (currentFadeRoutine != null) {
+            StopCoroutine(currentFadeRoutine);
+        }
+
+        currentFadeRoutine = StartCoroutine(FadeOut(time));
     }
 
     public void TurnOn(float fadeInTime, float turnOnDelay) {
-        StartCoroutine(FadeInWithDelay(fadeInTime, turnOnDelay));
+        if (currentFadeRoutine != null) {
+            StopCoroutine(currentFadeRoutine);
+        }
+
+        currentFadeRoutine = StartCoroutine(FadeInWithDelay(fadeInTime, turnOnDelay));
     }
 
 

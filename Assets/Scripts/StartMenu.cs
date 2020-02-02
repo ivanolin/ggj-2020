@@ -20,7 +20,7 @@ public class StartMenu : MonoBehaviour
 
     public void Play()
     {
-        Managers.AudioManager?.SwitchToMain();
+        Managers.AudioManager?.SwitchToMain(false);
         screenWipe.WipeScreen();
         StartCoroutine(LoadSceneWithDelay(1, screenWipe.wipeTime + 0.5f));
     }

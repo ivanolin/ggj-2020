@@ -19,6 +19,8 @@ public class HealthController : MonoBehaviour
     public AudioClip deathSound;
     public AudioClip[] healSounds;
 
+    public bool hasTriggeredEnd;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +38,14 @@ public class HealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(health <= 0)
+        if(!hasTriggeredEnd && health <= 0)
         {
+            hasTriggeredEnd = true;
+
             //TRIGGER POOF ANIMATION
+
+
+            Managers.AudioManager?.EndMain(true);
         }
     }
 
