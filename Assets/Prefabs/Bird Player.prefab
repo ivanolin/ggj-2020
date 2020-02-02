@@ -77,7 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 09fe0c04b80a44024a37ea8d051f64e0, type: 3}
+  m_Sprite: {fileID: 3486085480069679159, guid: 3abae53780a1747499b417b673d65e20,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -187,9 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12d31a5dd1d82794498509c90708cf04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalAxis: BirdHorizontal
-  VerticalAxis: BirdVertical
-  HopFactor: 1000
+  jumpVaild: 0
 --- !u!1 &6815616428411884490
 GameObject:
   m_ObjectHideFlags: 0

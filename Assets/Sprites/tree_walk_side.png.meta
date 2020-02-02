@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -5085947316970631804
-    second: sideStepfixed_0
+    second: tree_walk_side_0
   - first:
       213: -4349887048338712496
-    second: sideStepfixed_1
+    second: tree_walk_side_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sideStepfixed_0
+      name: tree_walk_side_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,7 +112,7 @@ TextureImporter:
         width: 569
         height: 898
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -125,7 +125,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sideStepfixed_1
+      name: tree_walk_side_1
       rect:
         serializedVersion: 2
         x: 570
@@ -133,7 +133,7 @@ TextureImporter:
         width: 572
         height: 895
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
