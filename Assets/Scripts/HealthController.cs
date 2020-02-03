@@ -31,7 +31,7 @@ public class HealthController : MonoBehaviour
     {
         maxHealth = health;
         movementController = GetComponent<PlayerMovementController>();
-        health = maxHealth / 3 * 2;
+        health = maxHealth;
         SetHealthBar();
         animator = GetComponentInChildren<Animator>();
     }
